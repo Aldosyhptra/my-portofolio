@@ -24,7 +24,9 @@ const Navbar = () => {
   return (
       <nav className={'bg-gradient-to-r from-gray-500 to-gray-900 text-white px-6 py-4 fixed w-full top-0 z-50 shadow-md transition-all duration-300 ' + (isScrollingDown ? 'translate-y-[-100%]' : 'translate-y-0')}>
       <div className="flex items-center justify-between">
-        <div className="text-2xl font-bold">MyPortfolio</div>
+        <a href="#home" className="text-white text-lg font-semibold transform hover:scale-105 transition-all duration-300">
+          <p className="text-2xl font-bold underline text-white">Aldo</p>
+        </a>
 
         {/* Hamburger Button - only visible on small screens */}
         <div className="md:hidden">
@@ -35,7 +37,7 @@ const Navbar = () => {
 
         {/* Menu - hidden on mobile */}
         <ul className="hidden md:flex space-x-6 text-lg">
-          <li><a href="#home" className="hover:text-gray-400">Home</a></li>
+          <li><a href="#home" className="hover:text-gray-400 ">Home</a></li>
           <li><a href="#about" className="hover:text-gray-400">About</a></li>
           <li><a href="#project" className="hover:text-gray-400">Projects</a></li>
           <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
