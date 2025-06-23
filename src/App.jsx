@@ -4,6 +4,7 @@ import About from "./components/about.jsx";
 import Projects from "./components/projects.jsx";
 import Contact from "./components/contacts.jsx";
 import Navbar from "./components/navbar.jsx";
+import Sidebar from "./components/sidebar.jsx";
 
 function App() {
   return (
