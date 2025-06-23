@@ -32,7 +32,7 @@ export default function Home() {
           </p>
 
           <motion.div
-            className="flex sflex-row gap-4 mt-6 h-full"
+            className="flex flex-row justify-center items-center md:justify-start md:items-start gap-4 mt-6 h-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
