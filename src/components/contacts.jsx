@@ -24,7 +24,7 @@ export default function Contact() {
               <a href={`https://wa.me/${dataPribadi.phone}`} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-white transition-all">
                   <FaWhatsapp className="text-3xl text-gray-500 dark:text-gray-400 hover:text-white transition-all" />
               </a>
-              <a href={`mailto:${dataPribadi.email}`} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-white transition-all">
+              <a href={`https://mail.google.com/mail/?view=cm&to=${dataPribadi.email}`} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-white transition-all">
                   <SiGmail className="text-3xl text-gray-500 dark:text-gray-400 hover:text-white transition-all" />
               </a>
               
