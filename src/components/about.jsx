@@ -4,22 +4,18 @@ import { SiNextdotjs, SiBootstrap, SiTailwindcss } from 'react-icons/si';
 
 
 export default function About() {
-    const skills = [
-    { name: 'React', level: 70 },
-    { name: 'Next.js', level: 65 },
-    { name: 'Vue.js', level: 65 },
-    { name: 'Laravel', level: 70 },
-    { name: 'Python', level: 80 },
-    { name: 'Tailwind CSS', level: 90 },
-    { name: 'Bootstrap CSS', level: 90 },
-    { name: 'JavaScript', level: 75 },
-  ];
 
   return (
-    <section id="about" className="bg-gray-900 w-full mx-auto py-10 px-10 md:px-0 h-full flex flex-col gap-10 items-center justify-center">
+    <section id="about" className="bg-gray-900 w-full mx-auto py-10 md:py-20 px-10 md:px-0 h-full flex flex-col gap-10 items-center justify-center">
 
       <div>
-        <h2 className="text-3xl font-semibold mb-4 text-center">About Me</h2>
+        <span className="flex items-center mb-5 md:mb-10">
+          <span className="h-px flex-1 bg-gray-300"></span>
+
+          <span className="shrink-0 px-4 text-white text-xl md:text-3xl">About Me</span>
+
+          <span className="h-px flex-1 bg-gray-300"></span>
+        </span>
         <p className="text-gray-300 max-w-3xl text-justify mx-auto">Hi! Aku {dataPribadi.name}, mahasiswa yang lagi menempuh studi di Universitas Achmad Yani Yogyakarta dengan jurusan Sistem Informasi dan saat ini lagi fokus banget memperdalam dunia {dataPribadi.role}. Aku suka bikin tampilan web yang nggak cuma enak dilihat, tapi juga nyaman dipakai.
 
         Dunia coding buatku seperti puzzle yang seru, apalagi ketika bisa nyatuin desain dan fungsi jadi satu tampilan yang utuh. Aku biasa pakai React, Tailwind CSS, dan sekarang lagi rajin eksplor hal-hal baru di dunia web development.
@@ -29,7 +25,7 @@ export default function About() {
 
       <div className="w-full max-w-3xl mx-auto">
         <h3 className="text-xl font-semibold mb-2 text-center">Bahasa & Teknologi yang Dikuasai</h3>
-        <div className="flex flex-wrap justify-center gap-6 mt-6 text-white">
+        <div className="flex flex-wrap justify-center items-center gap-6 mt-6 text-white">
           <div className="flex flex-col items-center transform transition-all hover:scale-105">
             <FaReact className="w-10 h-10 text-cyan-400 " />
             <span className="mt-2">React</span>
