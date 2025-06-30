@@ -1,18 +1,18 @@
 import dataPribadi from '../data';
 import { motion } from 'framer-motion';
-import { FaReact, FaVuejs, FaLaravel, FaPython } from 'react-icons/fa';
+import { FaReact, FaVuejs, FaLaravel, FaPython, FaHtml5, FaCss3 } from 'react-icons/fa';
 import { SiNextdotjs, SiBootstrap, SiTailwindcss } from 'react-icons/si';
 
 
 export default function About() {
 
   return (
-    <section id="about" className="bg-gray-900 w-full mx-auto py-10 md:py-20 px-10 md:px-0 h-full flex flex-col gap-10 items-center justify-center">
+    <section id="about" className=" w-full mx-auto py-10 md:py-20 px-10 md:px-0 h-full flex flex-col gap-10 items-center justify-center">
       <motion.div
         className="md:w-[50vw] mt-10 md:mt-0"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
       <div>
@@ -33,42 +33,59 @@ export default function About() {
         className="md:w-[50vw] mt-10 md:mt-0"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
-        <div className="w-full max-w-3xl mx-auto">
-          <h3 className="text-xl font-semibold mb-2 text-center">Bahasa & Teknologi yang Dikuasai</h3>
+
+        <div className="w-full max-w-3xl mx-auto md:mb-10 mb-15 ">
+          <h3 className="text-xl font-semibold mb-2 text-center">Bahasa & Teknologi Yang Dikuasai</h3>
           <div className="flex flex-wrap justify-center items-center gap-6 mt-6 text-white">
-            <div className="flex flex-col items-center transform transition-all hover:scale-105">
-              <FaReact className="w-10 h-10 text-cyan-400 " />
-              <span className="mt-2">React</span>
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <FaHtml5 className="w-10 h-10 text-cyan-400 " />
+              <span className="mt-2 transition-transform group-hover:scale-110">Html5</span>
             </div>
-            <div className="flex flex-col items-center transform transition-all hover:scale-105">
-              <SiNextdotjs className="w-10 h-10 text-white" />
-              <span className="mt-2">Next.js</span>
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <FaCss3 className="w-10 h-10 text-white transition-transform" />
+              <span className="mt-2 transition-transform group-hover:scale-110">CSS</span>
             </div>
-            <div className="flex flex-col items-center transform transition-all hover:scale-105">
-              <FaVuejs className="w-10 h-10 text-green-500" />
-              <span className="mt-2">Vue.js</span>
+
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <FaPython className="w-10 h-10 text-yellow-300 transition-transform" />
+              <span className="mt-2 transition-transform group-hover:scale-110">Python</span>
             </div>
-            <div className="flex flex-col items-center transform transition-all hover:scale-105">
-              <FaLaravel className="w-10 h-10 text-red-500" />
-              <span className="mt-2">Laravel</span>
-            </div>
-            <div className="flex flex-col items-center transform transition-all hover:scale-105">
-              <FaPython className="w-10 h-10 text-yellow-300" />
-              <span className="mt-2">Python</span>
-            </div>
-            <div className="flex flex-col items-center transform transition-all hover:scale-105">
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
               <SiBootstrap className="w-10 h-10 text-yellow-300" />
-              <span className="mt-2">Bootstrap</span>
+              <span className="mt-2 transition-transform group-hover:scale-110">Bootstrap</span>
             </div>
-            <div className="flex flex-col items-center transform transition-all hover:scale-105">
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
               <SiTailwindcss className="w-10 h-10 text-yellow-300" />
-              <span className="mt-2">Tailwind CSS</span>
+              <span className="mt-2 transition-transform group-hover:scale-110">Tailwind CSS</span>
             </div>
           </div>
         </div>
+
+        <div className="w-full max-w-3xl mx-auto">
+          <h3 className="text-xl font-semibold mb-2 text-center">Bahasa & Teknologi Yang Saat Ini Sedang Dipelajari</h3>
+          <div className="flex flex-wrap justify-center items-center gap-6 mt-6 text-white">
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <FaReact className="w-10 h-10 text-cyan-400 " />
+              <span className="mt-2 transition-transform group-hover:scale-110">React</span>
+            </div>
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <SiNextdotjs className="w-10 h-10 text-white" />
+              <span className="mt-2 transition-transform group-hover:scale-110">Next.js</span>
+            </div>
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <FaVuejs className="w-10 h-10 text-green-500" />
+              <span className="mt-2 transition-transform group-hover:scale-110">Vue.js</span>
+            </div>
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <FaLaravel className="w-10 h-10 text-red-500" />
+              <span className="mt-2 transition-transform group-hover:scale-110">Laravel</span>
+            </div>
+          </div>
+        </div>
+
       </motion.div>
 
     </section>
