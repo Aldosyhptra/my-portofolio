@@ -7,20 +7,11 @@ export default function Home() {
       id="home"
       className="bg-gradient-to-b from-gray-700 px-10 md:px-0 pt-25 mb-10 md:mb-0 md:pt-0 text-start flex flex-col md:flex-row items-center justify-center w-full h-full md:h-screen mx-auto overflow-hidden"
     >
-      <motion.img
-        src="img/gambaraldo.jpg"
-        alt="hero"
-        className="md:w-[50vw] w-50 h-100 md:h-screen object-cover rounded-2xl md:rounded-none shadow h"
+      <motion.div
+        className="md:w-[50vw] mt-10 md:mt-0 order-1 md:order-0"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-        loading="lazy"
-      />
-
-      <motion.div
-        className="md:w-[50vw] mt-10 md:mt-0"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
         <div className="mx-auto md:w-[30vw]">
@@ -51,6 +42,16 @@ export default function Home() {
 
         </div>
       </motion.div>
+      <motion.img
+        src="img/gambaraldo.jpg"
+        alt="hero"
+        className="md:w-[50vw] w-50 h-50 md:h-screen object-centers object-cover rounded-2xl md:rounded-none shadow order-0 md:order-1 select-none"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        loading="lazy"
+      />
     </section>
   );
 }

@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
   
   return (
-      <nav className={'backdrop-blur-md bg-black/20 text-white px-6 py-4 fixed w-full top-0 z-50 shadow-md transition-all duration-300 ' + (isScrollingDown ? 'translate-y-[-100%]' : 'translate-y-0')}>
+      <nav className={'backdrop-blur-md bg-black/50 text-white px-6 py-4 fixed w-full top-0 z-50 shadow-md transition-all duration-300 ' + (isScrollingDown ? 'translate-y-[-100%]' : 'translate-y-0')}>
       <div className="flex items-center justify-end">
 
         {/* Hamburger Button - only visible on small screens */}
@@ -48,11 +48,11 @@ const Navbar = () => {
                 about
             </span>
           </a></li>
-          <li><a href="#projects" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
+          <li><a href="#project" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                projects
+                project
             </span>
           </a></li>
           <li><a href="#contact" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
@@ -82,11 +82,11 @@ const Navbar = () => {
                 about
             </span>
           </a></li>
-          <li><a onClick={toggleMenu} href="#projects" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
+          <li><a onClick={toggleMenu} href="#project" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                projects
+                project
             </span>
           </a></li>
           <li><a onClick={toggleMenu} href="#contact" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
