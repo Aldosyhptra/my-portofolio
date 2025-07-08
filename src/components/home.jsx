@@ -19,7 +19,7 @@ export default function Home() {
             Hi, I'm {dataPribadi.name}
           </p>
           <p className="text-base md:text-lg text-gray-300 text-justify max-w-2xl">
-            Hi! Saya seorang pengembang {dataPribadi.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif. Saya telah bekerja dengan React, Next.js, Vue, Tailwind CSS, Bootstrap CSS, dan senang menjelajahi alat-alat baru untuk meningkatkan pengalaman pengguna.
+            Hi! Saya seorang pengembang {dataPribadi.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif. Saya saat ini sedang mempelajari React, Next.js, Vue,js dan juga saya sudah menguasai HTML, CSS, Python (Flask), Tailwind CSS, Bootstrap CSS, dan senang menjelajahi alat-alat baru untuk meningkatkan pengalaman pengguna.
           </p>
 
           <motion.div
@@ -28,9 +28,9 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
           >
-            <a href="#project">
+            <a href="/file/CV_Aldo_Syahputra.pdf" download>
               <button className="bg-white border-white border text-black px-8 py-3 transform hover:scale-105 hover:text-white hover:border-black hover:bg-black transition-all duration-300">
-                My Project
+                Download CV
               </button>
             </a>
             <a href="#contact">
