@@ -1,7 +1,7 @@
 import dataPribadi from '../data';
 import { motion } from 'framer-motion';
-import { FaReact, FaVuejs, FaLaravel, FaPython, FaHtml5, FaCss3 } from 'react-icons/fa';
-import { SiNextdotjs, SiBootstrap, SiTailwindcss } from 'react-icons/si';
+import { FaReact, FaVuejs, FaLaravel, FaPython, FaHtml5, FaCss3, FaFlask } from 'react-icons/fa';
+import { SiNextdotjs, SiBootstrap, SiTailwindcss, SiJavascript } from 'react-icons/si';
 
 
 export default function About() {
@@ -48,10 +48,17 @@ export default function About() {
               <FaCss3 className="w-10 h-10 text-white transition-transform" />
               <span className="mt-2 transition-transform group-hover:scale-110">CSS</span>
             </div>
-
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <SiJavascript className="w-10 h-10 text-yellow-300" />
+              <span className="mt-2 transition-transform group-hover:scale-110">Javascript</span>
+            </div>
             <div className="group flex flex-col items-center transition-all transform hover:scale-105">
               <FaPython className="w-10 h-10 text-yellow-300 transition-transform" />
               <span className="mt-2 transition-transform group-hover:scale-110">Python</span>
+            </div>
+            <div className="group flex flex-col items-center transition-all transform hover:scale-105">
+              <FaFlask className="w-10 h-10 text-yellow-300 transition-transform" />
+              <span className="mt-2 transition-transform group-hover:scale-110">Flask</span>
             </div>
             <div className="group flex flex-col items-center transition-all transform hover:scale-105">
               <SiBootstrap className="w-10 h-10 text-yellow-300" />
