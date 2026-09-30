@@ -21,7 +21,7 @@ export default function Contact() {
 
     if (res.ok) {
       form.reset();
-      setShowModal(true); // Tampilkan modal sukses
+      setShowModal(true); 
     } else {
       alert("Terjadi kesalahan saat mengirim. Silakan coba lagi.");
     }
@@ -119,7 +119,7 @@ export default function Contact() {
             Reach Me
           </p>
           <div className="flex flex-row md:flex-col items-center gap-2 md:gap-0">
-            <div className="h-px w-12 md:w-px md:h-12 bg-gray-300"></div>
+            <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>
             <div className="flex flex-row md:flex-col items-center gap-2 my-5">
               <a href={`https://github.com/${dataPribadi.github}`} target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-3xl text-gray-500 hover:text-white transition-all" />
@@ -137,7 +137,7 @@ export default function Contact() {
                 <SiGmail className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
             </div>
-            <div className="h-px w-12 md:w-px md:h-12 bg-gray-300"></div>
+            <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>
           </div>
         </aside>
       </div>
