@@ -16,7 +16,7 @@ export const iprAndCertifications = [
   },
   {
     title: "Sertifikasi Kompetensi BNSP",
-    detail: "Bidang web development",
+    detail: "Junior Web Developer",
     issuer: null, // nama LSP: TODO(owner)
     date: "Juli 2025 – Juli 2028",
     evidence: "https://drive.google.com/drive/folders/1lRDM5Wf44tsj6zZjmhCbQ_G-GX53DrWw",

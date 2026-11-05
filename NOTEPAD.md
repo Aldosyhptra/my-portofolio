@@ -130,7 +130,7 @@ yang menulis reCAPTCHA v2 — penggantinya setara untuk tujuan anti-spam, tanpa 
 
 ## TODO(owner) tersisa
 
-- URL folder Google Drive bukti (sertifikat, penghargaan, HKI).
+- ~~URL folder Drive bukti~~ → sudah dipasang (lihat catatan 5 Nov).
 - Jumlah tim peserta Innovatect dan Technovation (bila diketahui).
 - Nama skema BNSP persis, nama LSP, dan status akreditasi SINTA jurnal (jika boleh diklaim).
 - Ganti nama repo `SCS_Project` → "CSC" (opsional; kartu sudah tampil dengan nama "CSC Group Website").
