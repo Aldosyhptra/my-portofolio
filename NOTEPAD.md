@@ -8,7 +8,7 @@ Update tiap fase. Jangan dihapus.
 | Fase | Isi | Status |
 |---|---|---|
 | 0 | Audit | ✅ Selesai (5 Nov 2026) |
-| 1 | Koreksi konten cepat | ⬜ Belum |
+| 1 | Koreksi konten cepat | ✅ Selesai (5 Nov 2026) |
 | 2 | Skills dan data | ⬜ Belum |
 | 3 | Project | ⬜ Belum |
 | 4 | Bagian baru (Pengalaman, Pencapaian) | ⬜ Belum |
@@ -35,6 +35,17 @@ LCP 7,9 detik (hero JPG 338 KB + `loading="lazy"` di gambar LCP), CLS 0. Build b
 - A11y 78: tombol hamburger tanpa nama aksesibel, 5 link ikon sosial tanpa label, tanpa landmark `<main>`, kontras gagal 33 item.
 - Kode mati: `src/components/card.jsx`, `src/components/orb.jsx`, `src/App.css`, `src/css/orb.css`.
 - Dependency tak terpakai: `gsap`, `@appletosolutions/reactbits`, `react-simple-animate`, `react-router-dom`, plus `three`/`@react-three/*`/`meshline`/`ogl` (hanya dipakai kode mati).
+
+## Fase 1 — koreksi konten (5 Nov 2026)
+
+Teks Hero sesuai PRD 6.1 (judul, subjudul tanpa "pengembang"/"...", baris pendukung fresh graduate · AI),
+About ditulis ulang 2 paragraf rata kiri sesuai 6.2, ejaan HTML/JavaScript, placeholder form "Email kamu"/"Pesanmu",
+meta title + description diisi. Tambahan (dicabut dari Fase 5, karena tautan mati): href CV `/dist/file/` → `/file/`
+dan `alt="hero"` → `alt="Potret Aldo Syahputra"` sesuai 6.1. Build bersih.
+
+Belum dikerjakan (tercatat untuk fase lanjutan): tombol "Send" masih Inggris dan label judul section
+("About Me", "Contact Me", "Reach Me") masih campur — keputusan bahasa ada di tangan pemilik; `lang="id"`,
+Open Graph, favicon check, `robots.txt` masuk SEO/Fase 6; ganti file CV + tes tombol tetap Fase 5.
 
 ## Keputusan pemilik (5 Nov 2026)
 
