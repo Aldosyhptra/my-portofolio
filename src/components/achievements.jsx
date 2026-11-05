@@ -8,13 +8,13 @@ function AchievementCard({ label, title, meta, url, evidence, delay }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay }}
-      className="bg-gray-100 rounded-xl p-4 shadow-lg"
+      className="bg-gray-100 rounded-xl p-4 shadow-lg flex flex-col h-full"
     >
       <p className="text-xs font-semibold text-blue-700 mb-1">{label}</p>
       <h3 className="font-semibold text-black">{title}</h3>
       <p className="text-sm text-gray-600">{meta}</p>
       {(url || evidence) && (
-        <div className="flex gap-3">
+        <div className="mt-auto pt-4 flex gap-3">
           {evidence && (
             <a href={evidence} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline text-sm">
               Dokumen →
@@ -48,7 +48,7 @@ export default function Achievements() {
     <section id="pencapaian" className="py-10">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6 text-center text-white">Pencapaian & Publikasi</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-stretch">
           {cards.map((c, i) => (
             <AchievementCard key={c.title} {...c} delay={(i % 3) * 0.1} />
           ))}
