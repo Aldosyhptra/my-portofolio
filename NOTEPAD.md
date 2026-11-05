@@ -12,8 +12,8 @@ Update tiap fase. Jangan dihapus.
 | 2 | Skills dan data | ✅ Selesai (5 Nov 2026) |
 | 3 | Project | ✅ Selesai (5 Nov 2026) |
 | 4 | Pengalaman + Pencapaian | ✅ Selesai (5 Nov 2026) |
-| 5 | Kontak & Sosial | ⬜ Sebagian (5 Nov 2026) — IG fix + robots.txt; menunggu reCAPTCHA + domain |
-| 6 | Kualitas (Lighthouse, responsif) | ⬜ Sebagian (5 Nov 2026) — gambar WebP (4,2 MB → 217 KB) |
+| 5 | Kontak & Sosial | ✅ Selesai (6 Nov 2026) — reCAPTCHA ditunda (keputusan pemilik), anti-spam pakai honeypot Formspree |
+| 6 | Kualitas (Lighthouse, responsif) | ✅ Selesai (6 Nov 2026) — Lighthouse 72/100/100/100; Perf di bawah target diterima sebagai deviasi |
 
 ## Fase 0 — Hasil audit (5 Nov 2026)
 
@@ -110,6 +110,13 @@ gambar dikompres 330 → 139 KB (900w WebP).
 **Kendala**: Performance mentok 72 (target PRD ≥85). Penyebab: estimasi Lighthouse (throttle 4G + CPU
 lambat 4×) menahan render hero di belakang eksekusi JS — React SPA + framer-motion (~51 KB terbuang,
 TBT 210 ms). Perlu keputusan pemilik: ganti animasi framer → CSS murni / hero statis di HTML / terima.
+
+## Keputusan pemilik (6 Nov 2026)
+
+Performance Lighthouse **72 diterima** — target PRD ≥85 dicatat sebagai deviasi; UX nyata sudah cepat
+(FCP 0,8 s, Speed Index 1,0 s) dan skor mentok karena model estimasi Lighthouse terhadap SPA React.
+reCAPTCHA **ditunda** (keputusan pemilik); anti-spam memakai honeypot Formspree (deviasi dari PRD 6.7
+yang menulis reCAPTCHA v2 — penggantinya setara untuk tujuan anti-spam, tanpa kunci).
 
 ## Keputusan pemilik (5 Nov 2026)
 
