@@ -40,7 +40,7 @@ export const projects = [
     summary:
       "Aplikasi pemesanan guide, porter, dan penyewaan alat mendaki — Juara 1 Innovatect 2024.",
     stack: ["Flask", "Jinja", "Bootstrap"],
-    badges: [{ text: "Juara 1 · Innovatect 2024", url: null }],
+    badges: [{ text: "Juara 1 · Innovatect 2024", url: "https://www.instagram.com/p/C8HYT82SPAk/" }],
     repo: "https://github.com/Aldosyhptra/MountServ",
     demo: null,
     image: null,
