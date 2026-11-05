@@ -100,6 +100,17 @@ Perbaikan bug tautan Instagram di bagian Kontak (`https://instagram/...` → `ht
 Empat tangkapan layar proyek dikompres PNG → WebP (maks 1200px, kualitas 80): total 4.239 KB → 217 KB
 (-95%), file PNG asli dihapus. Tertunda: reCAPTCHA v2 (butuh keys) dan `sitemap.xml` (butuh URL domain).
 
+## Fase 6 — Lighthouse (putaran 1–3, 6 Nov 2026)
+
+Baseline 75/78/100/83 → kini **72/100/100/100** (Perf/A11y/BP/SEO). Aksesibilitas 100: warna tautan
+global template Vite (#646cff) dihapus dari `index.css` (meng-override kelas Tailwind), hierarki heading
+("Tentang Saya" → h2), landmark `<main>`, ikon sosial & skill `aria-hidden`, tombol Kirim biru-700.
+SEO 100: meta OG + sitemap.xml + robots.txt. LCP: hero di-eager + `fetchpriority` + preload di HTML,
+gambar dikompres 330 → 139 KB (900w WebP).
+**Kendala**: Performance mentok 72 (target PRD ≥85). Penyebab: estimasi Lighthouse (throttle 4G + CPU
+lambat 4×) menahan render hero di belakang eksekusi JS — React SPA + framer-motion (~51 KB terbuang,
+TBT 210 ms). Perlu keputusan pemilik: ganti animasi framer → CSS murni / hero statis di HTML / terima.
+
 ## Keputusan pemilik (5 Nov 2026)
 
 1. Hapus semua kode mati dan dependency tak terpakai.

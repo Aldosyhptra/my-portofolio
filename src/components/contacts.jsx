@@ -55,7 +55,7 @@ export default function Contact() {
           ></textarea>
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800"
           >
             Kirim
           </button>
@@ -126,19 +126,19 @@ export default function Contact() {
             <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>
             <div className="flex flex-row md:flex-col items-center gap-2 my-5">
               <a href={`https://github.com/${profile.github}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <FaGithub className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <FaGithub aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
               <a href={`https://wa.me/${profile.phone}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <FaWhatsapp className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <FaWhatsapp aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
               <a href={`https://www.instagram.com/${profile.instagram}`} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FaInstagram className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <FaInstagram aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <FaLinkedin className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <FaLinkedin aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
               <a href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} target="_blank" rel="noopener noreferrer" aria-label="Email">
-                <SiGmail className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <SiGmail aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
             </div>
             <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>

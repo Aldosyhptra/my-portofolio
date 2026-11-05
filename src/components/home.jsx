@@ -50,14 +50,15 @@ export default function Home() {
 
         {/* Gambar Kanan */}
         <motion.img
-          src="img/gambaraldo.jpg"
+          src="img/gambaraldo.webp"
           alt="Potret Aldo Syahputra"
           className="md:w-[50vw] w-50 h-50 md:h-screen object-center object-cover rounded-2xl md:rounded-none shadow order-0 md:order-1 select-none"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
     </section>
