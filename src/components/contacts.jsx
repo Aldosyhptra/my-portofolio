@@ -39,13 +39,13 @@ export default function Contact() {
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Email kamu"
             required
             className="w-full p-2 border border-gray-300 rounded"
           />
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder="Pesanmu"
             required
             className="w-full p-2 border border-gray-300 rounded"
           ></textarea>

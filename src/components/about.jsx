@@ -21,11 +21,12 @@ export default function About() {
           <span className="shrink-0 px-4 text-white text-xl md:text-3xl">About Me</span>
           <span className="h-px flex-1 bg-gray-300"></span>
         </span>
-        <p className="text-gray-300 max-w-3xl text-justify mx-auto">Hi! Aku {dataPribadi.name}, mahasiswa yang lagi menempuh studi di Universitas Achmad Yani Yogyakarta dengan jurusan Sistem Informasi dan saat ini lagi fokus banget memperdalam dunia {dataPribadi.role}. Aku suka bikin tampilan web yang nggak cuma enak dilihat, tapi juga nyaman dipakai.
-
-        Dunia coding buatku seperti puzzle yang seru, apalagi ketika bisa nyatuin desain dan fungsi jadi satu tampilan yang utuh. Aku biasa pakai React, Tailwind CSS, dan sekarang lagi rajin eksplor hal-hal baru di dunia web development.
-
-        Walaupun masih mahasiswa, aku semangat banget buat belajar langsung di dunia industri. Aku lagi nyari kesempatan magang buat nambah pengalaman, belajar kerja tim, dan tentunya nerusin passion-ku di bidang teknologi.</p>
+        <p className="text-gray-300 max-w-3xl mx-auto mb-4">
+          Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web dan ketertarikan pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
+        </p>
+        <p className="text-gray-300 max-w-3xl mx-auto">
+          Pengalaman saya mencakup magang, proyek klien freelance, serta proyek kompetisi dan riset di kampus. Saat ini saya mencari kesempatan magang atau posisi junior untuk memperdalam pengalaman di dunia industri.
+        </p>
       </div>
       </motion.div>
 
@@ -42,7 +43,7 @@ export default function About() {
           <div className="flex flex-wrap justify-center items-center gap-6 mt-6 text-white">
             <div className="group flex flex-col items-center transition-all transform hover:scale-105">
               <FaHtml5 className="w-10 h-10 text-cyan-400 " />
-              <span className="mt-2 transition-transform group-hover:scale-110">Html5</span>
+              <span className="mt-2 transition-transform group-hover:scale-110">HTML</span>
             </div>
             <div className="group flex flex-col items-center transition-all transform hover:scale-105">
               <FaCss3 className="w-10 h-10 text-white transition-transform" />
@@ -50,7 +51,7 @@ export default function About() {
             </div>
             <div className="group flex flex-col items-center transition-all transform hover:scale-105">
               <SiJavascript className="w-10 h-10 text-yellow-300" />
-              <span className="mt-2 transition-transform group-hover:scale-110">Javascript</span>
+              <span className="mt-2 transition-transform group-hover:scale-110">JavaScript</span>
             </div>
             <div className="group flex flex-col items-center transition-all transform hover:scale-105">
               <FaPython className="w-10 h-10 text-yellow-300 transition-transform" />
