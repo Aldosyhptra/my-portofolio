@@ -11,7 +11,7 @@ Update tiap fase. Jangan dihapus.
 | 1 | Koreksi konten cepat | ✅ Selesai (5 Nov 2026) |
 | 2 | Skills dan data | ✅ Selesai (5 Nov 2026) |
 | 3 | Project | ✅ Selesai (5 Nov 2026) |
-| 4 | Bagian baru (Pengalaman, Pencapaian) | ⬜ Belum |
+| 4 | Pengalaman + Pencapaian | ✅ Selesai (5 Nov 2026) |
 | 5 | Kontak, sosial, dan CV | ⬜ Belum |
 | 6 | Kualitas (Lighthouse, responsif) | ⬜ Belum |
 
@@ -82,6 +82,16 @@ Deviasi sadar: (1) pengayaan GitHub API (bintang) TIDAK diimplementasi — tidak
 penerimaan yang menuntutnya, dan data statis sudah jadi sumber kebenaran; pintu terbuka bila perlu
 (tambah `lib/github.js` best-effort). (2) Bagian "Proyek Lainnya" (opsional di PRD) tidak dibuat.
 Fase 3 dikerjakan di branch `fase-2` sesuai arahan pemilik (PR di-merge setelah fase ini).
+
+## Fase 4 — bagian Pengalaman + Pencapaian & Publikasi (5 Nov 2026)
+
+Komponen baru `experience.jsx` (3 baris dari `data/experience.js`) dan `achievements.jsx`
+(2 penghargaan + 2 entri HKI/sertifikat + 1 publikasi dari `data/achievements.js`), disusun
+setelah bagian Tentang sesuai urutan PRD §6. Navbar bertambah item "Pengalaman" (desktop + mobile).
+Animasi stagger fade-up memakai **framer-motion** (`whileInView`) — AGENTS §9 menetapkan
+framer-motion; markup `data-aos` di PRD §6.3 tidak dipakai (AOS tidak terpasang, tanpa dep baru).
+Tombol "Lihat dokumen pendukung" (PRD §6.6) sengaja belum dibuat — menunggu URL folder Google
+Drive dari pemilik (TODO di bawah).
 
 ## Keputusan pemilik (5 Nov 2026)
 
