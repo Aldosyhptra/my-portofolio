@@ -19,10 +19,13 @@ export default function Home() {
         >
           <div className="mx-auto md:w-[30vw]">
             <p className="text-xl text-center md:text-start md:text-4xl font-bold mb-4 text-white">
-              Hi, I'm {dataPribadi.name}
+              Hi, saya {dataPribadi.name}
             </p>
-            <p className="text-base md:text-lg text-gray-300 text-justify max-w-2xl">
-              Hi! Saya seorang pengembang {dataPribadi.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif...
+            <p className="text-base md:text-lg text-gray-300 max-w-2xl">
+              {dataPribadi.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif.
+            </p>
+            <p className="text-sm md:text-base text-gray-400 mt-2 max-w-2xl">
+              Fresh graduate Sistem Informasi · tertarik pada integrasi AI.
             </p>
 
             <motion.div
@@ -31,7 +34,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
             >
-              <a href="/dist/file/CV_Aldo_Syahputra.pdf" download>
+              <a href="/file/CV_Aldo_Syahputra.pdf" download>
                 <button className="bg-white border-white border text-black px-8 py-3 transform hover:scale-105 hover:text-white hover:border-black hover:bg-black transition-all duration-300">
                   Download CV
                 </button>
@@ -48,7 +51,7 @@ export default function Home() {
         {/* Gambar Kanan */}
         <motion.img
           src="img/gambaraldo.jpg"
-          alt="hero"
+          alt="Potret Aldo Syahputra"
           className="md:w-[50vw] w-50 h-50 md:h-screen object-center object-cover rounded-2xl md:rounded-none shadow order-0 md:order-1 select-none"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
