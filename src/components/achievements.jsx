@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { awards, iprAndCertifications, publications } from "../data/achievements.js";
+import { awards, iprAndCertifications, publications, evidenceFolderUrl } from "../data/achievements.js";
 
-function AchievementCard({ label, title, meta, url, delay }) {
+function AchievementCard({ label, title, meta, url, evidence, delay }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -13,10 +13,19 @@ function AchievementCard({ label, title, meta, url, delay }) {
       <p className="text-xs font-semibold text-blue-700 mb-1">{label}</p>
       <h3 className="font-semibold text-black">{title}</h3>
       <p className="text-sm text-gray-600">{meta}</p>
-      {url && (
-        <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline text-sm">
-          Lihat →
-        </a>
+      {(url || evidence) && (
+        <div className="flex gap-3">
+          {evidence && (
+            <a href={evidence} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline text-sm">
+              Dokumen →
+            </a>
+          )}
+          {url && (
+            <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline text-sm">
+              Lihat →
+            </a>
+          )}
+        </div>
       )}
     </motion.div>
   );
@@ -25,11 +34,12 @@ function AchievementCard({ label, title, meta, url, delay }) {
 export default function Achievements() {
   // TODO(owner): tombol "Lihat dokumen pendukung" (PRD 6.6) — tampilkan setelah URL folder Google Drive tersedia.
   const cards = [
-    ...awards.map((a) => ({ label: "Penghargaan", title: a.title, meta: `${a.project} · ${a.year}` })),
+    ...awards.map((a) => ({ label: "Penghargaan", title: a.title, meta: `${a.project} · ${a.year}`, evidence: a.evidence })),
     ...iprAndCertifications.map((c) => ({
       label: "HKI & Sertifikat",
-      title: c.count ? `${c.count}× ${c.certificate}` : c.certificate,
-      meta: [c.project, c.period].filter(Boolean).join(" · "),
+      title: c.title,
+      meta: [c.detail, c.issuer, c.date].filter(Boolean).join(" · "),
+      evidence: c.evidence,
     })),
     ...publications.map((p) => ({ label: "Publikasi", title: p.title, meta: `${p.journal} · ${p.year}`, url: p.url })),
   ];
@@ -42,6 +52,16 @@ export default function Achievements() {
           {cards.map((c, i) => (
             <AchievementCard key={c.title} {...c} delay={(i % 3) * 0.1} />
           ))}
+        </div>
+        <div className="text-center mt-6">
+          <a
+            href={evidenceFolderUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 text-sm font-semibold"
+          >
+            Lihat dokumen pendukung
+          </a>
         </div>
       </div>
     </section>

@@ -2,8 +2,8 @@
 // Data yang belum ada ditandai null + TODO(owner), jangan ditebak.
 
 export const awards = [
-  { title: "Juara 1 Innovatect", project: "MountServ", year: "2024", team: null }, // jumlah tim: TODO(owner)
-  { title: "Karya Terinovatif ke-2 Technovation", project: "Tlogo Putri", year: "Juni 2025", team: null }, // jumlah tim: TODO(owner)
+  { title: "Juara 1 Innovatect", project: "MountServ", year: "2024", team: null, evidence: null }, // jumlah tim: TODO(owner)
+  { title: "Karya Terinovatif ke-2 Technovation", project: "Tlogo Putri", year: "Juni 2025", team: null, evidence: "https://drive.google.com/drive/folders/1X30wlR1GMQJCeBMEQ7LLvzHJ4Yfgu3WE" }, // jumlah tim: TODO(owner)
 ];
 
 export const iprAndCertifications = [
@@ -12,14 +12,19 @@ export const iprAndCertifications = [
     detail: "Pengenalan Emosi / Emojiku: program komputer, modul, dan poster",
     issuer: "Direktorat Jenderal Kekayaan Intelektual",
     date: "Oktober 2024",
+    evidence: "https://drive.google.com/drive/folders/1X30wlR1GMQJCeBMEQ7LLvzHJ4Yfgu3WE",
   },
   {
     title: "Sertifikasi Kompetensi BNSP",
     detail: "Bidang web development",
     issuer: null, // nama LSP: TODO(owner)
     date: "Juli 2025 – Juli 2028",
+    evidence: "https://drive.google.com/drive/folders/1lRDM5Wf44tsj6zZjmhCbQ_G-GX53DrWw",
   },
 ];
+
+// Folder Google Drive dokumen pendukung (pemilik, 5 Nov 2026).
+export const evidenceFolderUrl = "https://drive.google.com/drive/folders/1X30wlR1GMQJCeBMEQ7LLvzHJ4Yfgu3WE";
 
 export const publications = [
   {
