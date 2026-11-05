@@ -118,7 +118,7 @@ export const projects = [
     badges: [],
     repo: "https://github.com/Aldosyhptra/my-portofolio",
     demo: null,
-    image: null,
+    image: "img/proyek/portofolio.png",
     status: "selesai",
     featured: true,
     order: 8,
