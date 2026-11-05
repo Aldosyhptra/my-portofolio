@@ -10,7 +10,7 @@ export default function Experience() {
         <div className="space-y-4">
           {experiences.map((exp, i) => (
             <motion.div
-              key={exp.organization + exp.period}
+              key={exp.company + exp.period}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -21,8 +21,16 @@ export default function Experience() {
                 <h3 className="font-semibold text-black">{exp.role}</h3>
                 <span className="text-sm text-gray-600">{exp.period}</span>
               </div>
-              <p className="text-sm font-medium text-blue-700 mb-1">{exp.organization}</p>
-              <p className="text-sm text-gray-600">{exp.tasks}</p>
+              <p className="text-sm font-medium text-blue-700 mb-2">
+                {exp.company}
+                {exp.location ? ` · ${exp.location}` : ""}
+              </p>
+              <ul className="text-sm text-gray-600 list-disc pl-5 space-y-1">
+                {exp.items.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+              {exp.note && <p className="text-xs text-gray-600 mt-2">{exp.note}</p>}
             </motion.div>
           ))}
         </div>
