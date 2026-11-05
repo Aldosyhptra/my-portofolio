@@ -11,9 +11,9 @@ Update tiap fase. Jangan dihapus.
 | 1 | Koreksi konten cepat | ✅ Selesai (5 Nov 2026) |
 | 2 | Skills dan data | ✅ Selesai (5 Nov 2026) |
 | 3 | Project | ✅ Selesai (5 Nov 2026) |
-| 4 | Bagian baru (Pengalaman, Pencapaian) | ⬜ Belum |
-| 5 | Kontak, sosial, dan CV | ⬜ Belum |
-| 6 | Kualitas (Lighthouse, responsif) | ⬜ Belum |
+| 4 | Pengalaman + Pencapaian | ✅ Selesai (5 Nov 2026) |
+| 5 | Kontak & Sosial | ✅ Selesai (6 Nov 2026) — reCAPTCHA ditunda (keputusan pemilik), anti-spam pakai honeypot Formspree |
+| 6 | Kualitas (Lighthouse, responsif) | ✅ Selesai (6 Nov 2026) — Lighthouse 72/100/100/100; Perf di bawah target diterima sebagai deviasi |
 
 ## Fase 0 — Hasil audit (5 Nov 2026)
 
@@ -83,6 +83,41 @@ penerimaan yang menuntutnya, dan data statis sudah jadi sumber kebenaran; pintu 
 (tambah `lib/github.js` best-effort). (2) Bagian "Proyek Lainnya" (opsional di PRD) tidak dibuat.
 Fase 3 dikerjakan di branch `fase-2` sesuai arahan pemilik (PR di-merge setelah fase ini).
 
+## Fase 4 — bagian Pengalaman + Pencapaian & Publikasi (5 Nov 2026)
+
+Komponen baru `experience.jsx` (3 baris dari `data/experience.js`) dan `achievements.jsx`
+(2 penghargaan + 2 entri HKI/sertifikat + 1 publikasi dari `data/achievements.js`), disusun
+setelah bagian Tentang sesuai urutan PRD §6. Navbar bertambah item "Pengalaman" (desktop + mobile).
+Animasi stagger fade-up memakai **framer-motion** (`whileInView`) — AGENTS §9 menetapkan
+framer-motion; markup `data-aos` di PRD §6.3 tidak dipakai (AOS tidak terpasang, tanpa dep baru).
+Tombol "Lihat dokumen pendukung" (PRD §6.6) sengaja belum dibuat — menunggu URL folder Google
+Drive dari pemilik (TODO di bawah).
+
+## Fase 5/6 — pekerjaan tidak-terblokir (5 Nov 2026)
+
+Perbaikan bug tautan Instagram di bagian Kontak (`https://instagram/...` → `https://www.instagram.com/...`).
+`public/robots.txt` ditambahkan (izinkan crawl penuh; baris sitemap menyusul setelah domain pasti).
+Empat tangkapan layar proyek dikompres PNG → WebP (maks 1200px, kualitas 80): total 4.239 KB → 217 KB
+(-95%), file PNG asli dihapus. Tertunda: reCAPTCHA v2 (butuh keys) dan `sitemap.xml` (butuh URL domain).
+
+## Fase 6 — Lighthouse (putaran 1–3, 6 Nov 2026)
+
+Baseline 75/78/100/83 → kini **72/100/100/100** (Perf/A11y/BP/SEO). Aksesibilitas 100: warna tautan
+global template Vite (#646cff) dihapus dari `index.css` (meng-override kelas Tailwind), hierarki heading
+("Tentang Saya" → h2), landmark `<main>`, ikon sosial & skill `aria-hidden`, tombol Kirim biru-700.
+SEO 100: meta OG + sitemap.xml + robots.txt. LCP: hero di-eager + `fetchpriority` + preload di HTML,
+gambar dikompres 330 → 139 KB (900w WebP).
+**Kendala**: Performance mentok 72 (target PRD ≥85). Penyebab: estimasi Lighthouse (throttle 4G + CPU
+lambat 4×) menahan render hero di belakang eksekusi JS — React SPA + framer-motion (~51 KB terbuang,
+TBT 210 ms). Perlu keputusan pemilik: ganti animasi framer → CSS murni / hero statis di HTML / terima.
+
+## Keputusan pemilik (6 Nov 2026)
+
+Performance Lighthouse **72 diterima** — target PRD ≥85 dicatat sebagai deviasi; UX nyata sudah cepat
+(FCP 0,8 s, Speed Index 1,0 s) dan skor mentok karena model estimasi Lighthouse terhadap SPA React.
+reCAPTCHA **ditunda** (keputusan pemilik); anti-spam memakai honeypot Formspree (deviasi dari PRD 6.7
+yang menulis reCAPTCHA v2 — penggantinya setara untuk tujuan anti-spam, tanpa kunci).
+
 ## Keputusan pemilik (5 Nov 2026)
 
 1. Hapus semua kode mati dan dependency tak terpakai.
@@ -95,13 +130,15 @@ Fase 3 dikerjakan di branch `fase-2` sesuai arahan pemilik (PR di-merge setelah 
 
 ## TODO(owner) tersisa
 
-- URL folder Google Drive bukti (sertifikat, penghargaan, HKI).
+- ~~URL folder Drive bukti~~ → sudah dipasang (lihat catatan 5 Nov).
 - Jumlah tim peserta Innovatect dan Technovation (bila diketahui).
 - Nama skema BNSP persis, nama LSP, dan status akreditasi SINTA jurnal (jika boleh diklaim).
 - Ganti nama repo `SCS_Project` → "CSC" (opsional; kartu sudah tampil dengan nama "CSC Group Website").
 - ~~Peran di `codelens-web`~~ → sudah dikonfirmasi: Front-End Developer.
 - Status repo `AyamKuy`, `manajemen-pengeluaran`, `InspeksiMobilJogja`, `digitalisasi-surat`, `stickersukicau` (layak tampil / milik klien / belum matang).
-- Screenshot proyek (dikirim pemilik sebagian, satu per satu) untuk proyek yang punya UI.
-- URL postingan Instagram prodi tentang kemenangan Innovatect (dikirim pemilik) → isi ke `projects.js` `badges[0].url` MountServ.
+- Screenshot proyek (dikirim pemilik menyusul, satu per satu) untuk proyek yang punya UI. ✅ 4/6: `portofolio.png`, `codelens-web.png`, `mountserv.png`, `pengenalan-emosi.png` (di `img/proyek/`). Catatan: PNG 1,58 MB — perlu dikompres/webp saat Fase 6 (anggaran gambar).
+- ~~Folder Drive dokumen pendukung~~ → dua folder diterima (5 Nov 2026): pengargaan & hak cipta `1X30wlR1GMQJCeBMEQ7LLvzHJ4Yfgu3WE` (3 PDF HKI + Penghargaan Technovation), sertifikasi `1lRDM5Wf44tsj6zZjmhCbQ_G-GX53DrWw` (BNSP + **sertifikasi n8n**). Sudah dipasang sebagai tombol "Lihat dokumen pendukung" + tautan per kartu. Innovatect tetap tanpa sertifikat (bukti: postingan IG).
+- Konfirmasi: apakah **sertifikasi n8n** (ada di folder sertifikasi) perlu masuk `achievements.js`? Data kanonik AGENTS §6 hanya mencatat BNSP.
+- ~~URL postingan IG Innovatect~~ → sudah dipasang: `https://www.instagram.com/p/C8HYT82SPAk/` (bukti: pengumuman resmi @siunjaya "Juara 1 Tim 11 - Mountserv" + dokumentasi penerimaan hadiah).
 - Angka dampak (jumlah halaman, skor Lighthouse per proyek) bila sudah diukur.
 - Apakah akun Instagram `aldosyhptraa` layak ditampilkan sebagai kontak profesional.

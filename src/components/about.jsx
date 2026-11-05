@@ -53,11 +53,11 @@ export default function About() {
         transition={{ duration: 1, ease: 'easeOut' }}
       >
       <div>
-        <span className="flex items-center mb-5 md:mb-10">
+        <div className="flex items-center mb-5 md:mb-10">
           <span className="h-px flex-1 bg-gray-300"></span>
-          <span className="shrink-0 px-4 text-white text-xl md:text-3xl">Tentang Saya</span>
+          <h2 className="shrink-0 px-4 text-white text-xl md:text-3xl">Tentang Saya</h2>
           <span className="h-px flex-1 bg-gray-300"></span>
-        </span>
+        </div>
         <p className="text-gray-300 max-w-3xl mx-auto mb-4">
           Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web dan ketertarikan pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
         </p>
@@ -78,13 +78,13 @@ export default function About() {
                 {skillGroups.map((group) => (
           <div key={group.label} className="w-full max-w-3xl mx-auto mb-8">
             <h3 className="text-xl font-semibold mb-2 text-center">{group.label}</h3>
-            <div className="flex flex-wrap justify-center items-center gap-6 mt-6 text-white">
+            <div className="flex flex-wrap justify-center gap-2 mt-4">
               {group.items.map((item) => {
                 const Icon = iconMap[item] || FaCode;
                 return (
-                  <div key={item} className="group flex flex-col items-center transition-all transform hover:scale-105">
-                    <Icon className="w-10 h-10 text-cyan-400" />
-                    <span className="mt-2 transition-transform group-hover:scale-110">{item}</span>
+                  <div key={item} className="flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-full px-3 py-1.5 transition-all">
+                    <Icon aria-hidden="true" className="w-4 h-4 text-cyan-400 shrink-0" />
+                    <span className="text-sm text-white">{item}</span>
                   </div>
                 );
               })}

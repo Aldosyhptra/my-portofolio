@@ -18,9 +18,9 @@ export default function Home() {
           transition={{ duration: 1, ease: 'easeOut' }}
         >
           <div className="mx-auto md:w-[30vw]">
-            <p className="text-xl text-center md:text-start md:text-4xl font-bold mb-4 text-white">
+            <h1 className="text-xl text-center md:text-start md:text-4xl font-bold mb-4 text-white">
               Hi, saya {profile.name}
-            </p>
+            </h1>
             <p className="text-base md:text-lg text-gray-300 max-w-2xl">
               {profile.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif.
             </p>
@@ -50,14 +50,15 @@ export default function Home() {
 
         {/* Gambar Kanan */}
         <motion.img
-          src="img/gambaraldo.jpg"
+          src="img/gambaraldo.webp"
           alt="Potret Aldo Syahputra"
           className="md:w-[50vw] w-50 h-50 md:h-screen object-center object-cover rounded-2xl md:rounded-none shadow order-0 md:order-1 select-none"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
         />
       </div>
     </section>

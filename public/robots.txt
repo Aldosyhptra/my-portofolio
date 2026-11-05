@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aldo-portfolio-seven.vercel.app/sitemap.xml

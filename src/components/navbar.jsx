@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* Hamburger Button - only visible on small screens */}
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
+          <button onClick={toggleMenu} aria-label={isOpen ? "Tutup menu" : "Buka menu"}>
             {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
           </button>
         </div>
@@ -46,6 +46,13 @@ const Navbar = () => {
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
                 tentang
+            </span>
+          </a></li>
+          <li><a href="#pengalaman" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
+            <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
+                after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
+                hover:after:w-full after:transition-all after:duration-300">
+                pengalaman
             </span>
           </a></li>
           <li><a href="#project" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
@@ -80,6 +87,13 @@ const Navbar = () => {
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
                 tentang
+            </span>
+          </a></li>
+          <li><a onClick={toggleMenu} href="#pengalaman" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
+            <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
+                after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
+                hover:after:w-full after:transition-all after:duration-300">
+                pengalaman
             </span>
           </a></li>
           <li><a onClick={toggleMenu} href="#project" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
