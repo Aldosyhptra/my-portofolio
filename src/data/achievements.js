@@ -2,8 +2,8 @@
 // Data yang belum ada ditandai null + TODO(owner), jangan ditebak.
 
 export const awards = [
-  { title: "Juara 1 Innovatect", project: "MountServ", year: "2024", team: null, evidence: null }, // jumlah tim: TODO(owner)
-  { title: "Karya Terinovatif ke-2 Technovation", project: "Tlogo Putri", year: "Juni 2025", team: null, evidence: "https://drive.google.com/drive/folders/1X30wlR1GMQJCeBMEQ7LLvzHJ4Yfgu3WE" }, // jumlah tim: TODO(owner)
+  { title: "Juara 1 Innovatect", project: "MountServ", year: "Juni 2024", team: null, evidence: 'https://drive.google.com/file/d/1Raw7C8Dxy5QAVAwUlaCZORFHY13JERxe/view?usp=sharing' }, // jumlah tim: TODO(owner)
+  { title: "Karya Terinovatif ke-2 Technovation", project: "Tlogo Putri", year: "Juni 2025", team: null, evidence: "https://drive.google.com/file/d/1JMnSf_Sul9xIrKLbi2o3u4kI6veOzVU5/view?usp=drive_link" }, // jumlah tim: TODO(owner)
 ];
 
 export const iprAndCertifications = [
