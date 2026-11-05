@@ -71,6 +71,13 @@ Keputusan pemilik (5 Nov 2026): peran codelens-web = Front-End Developer; kartu 
 dengan link repo SCS_Project (izin klien aman). Status NutriFood dan codelens-web = null
 (tanpa lencana) karena tidak ada bukti — jangan ditebak.
 
+Penyesuaian setelah diskusi pemilik (5 Nov 2026): badge "Juara 1 Innovatect" TETAP di kartu
+MountServ, tapi kini bisa ditautkan ke bukti (badge = `string | { text, url }`); URL postingan
+Instagram prodi akan dikirim pemilik lalu diisi ke `badges[0].url`. Placeholder gambar dibuat
+netral tanpa teks — untuk proyek back-end (Tlogo Putri, tanpa akses repo FE) tidak ada
+janji "tangkapan layar menyusul"; Tlogo Putri tidak punya URL live (keputusan pemilik).
+Tangkapan layar dikirim pemilik sebagian, satu per satu.
+
 Deviasi sadar: (1) pengayaan GitHub API (bintang) TIDAK diimplementasi — tidak ada kriteria
 penerimaan yang menuntutnya, dan data statis sudah jadi sumber kebenaran; pintu terbuka bila perlu
 (tambah `lib/github.js` best-effort). (2) Bagian "Proyek Lainnya" (opsional di PRD) tidak dibuat.
@@ -94,6 +101,7 @@ Fase 3 dikerjakan di branch `fase-2` sesuai arahan pemilik (PR di-merge setelah 
 - Ganti nama repo `SCS_Project` → "CSC" (opsional; kartu sudah tampil dengan nama "CSC Group Website").
 - ~~Peran di `codelens-web`~~ → sudah dikonfirmasi: Front-End Developer.
 - Status repo `AyamKuy`, `manajemen-pengeluaran`, `InspeksiMobilJogja`, `digitalisasi-surat`, `stickersukicau` (layak tampil / milik klien / belum matang).
-- Screenshot atau link demo untuk proyek unggulan.
+- Screenshot proyek (dikirim pemilik sebagian, satu per satu) untuk proyek yang punya UI.
+- URL postingan Instagram prodi tentang kemenangan Innovatect (dikirim pemilik) → isi ke `projects.js` `badges[0].url` MountServ.
 - Angka dampak (jumlah halaman, skor Lighthouse per proyek) bila sudah diukur.
 - Apakah akun Instagram `aldosyhptraa` layak ditampilkan sebagai kontak profesional.
