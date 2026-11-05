@@ -1,19 +1,19 @@
 // Sumber kebenaran daftar Proyek Unggulan (PRD bagian 7). Tidak bergantung pada GitHub API.
 // status: "selesai" | "dikerjakan" | null (null = lencana tidak ditampilkan, jangan ditebak).
 // badges: string | { text, url } — url = tautan bukti (postingan resmi/dokumen), null sampai tersedia.
-// image: null → kartu menampilkan placeholder netral; TODO(owner): tangkapan layar asli per proyek.
+// image: null → kartu menampilkan placeholder netral; TODO(owner): tangkapan layar nyata nutrifood & csc-group.
 export const projects = [
   {
     id: "tlogo-putri",
     title: "Tlogo Putri",
     role: "Back-End Developer",
     summary:
-      "Pipeline Laravel: kata kunci → Google PSE → saring link yang sudah dipakai → ekstraksi teks → empat tahap OpenAI API (relevansi, tulis ulang, judul, kategori).",
+      "Pipeline Laravel: kata kunci → Google PSE → saring link yang sudah dipakai → ekstraksi teks → empat tahap OpenAI API (relevansi, tulis ulang, judul, kategori). Dikerjakan bersama tim; bagian saya pipeline back-end.",
     stack: ["Laravel", "PHP", "OpenAI API", "Google PSE"],
     badges: ["Karya Terinovatif ke-2 · Technovation 2025"],
     repo: "https://github.com/Aldosyhptra/telogo-putri-project",
     demo: null,
-    image: null,
+    image: "img/proyek/tlogo-putri.webp",
     status: "selesai",
     featured: true,
     order: 1,
@@ -28,7 +28,7 @@ export const projects = [
     badges: ["Publikasi jurnal SINTA 2"],
     repo: "https://github.com/Aldosyhptra/indot5-synthesis-mdebertav3-detection",
     demo: null,
-    image: null,
+    image: "img/proyek/indot5-detection.webp",
     status: "selesai",
     featured: true,
     order: 2,
@@ -117,7 +117,7 @@ export const projects = [
     stack: ["React", "Vite", "Vercel"],
     badges: [],
     repo: "https://github.com/Aldosyhptra/my-portofolio",
-    demo: null,
+    demo: "https://aldo-portfolio-seven.vercel.app/",
     image: "img/proyek/portofolio.webp",
     status: "selesai",
     featured: true,

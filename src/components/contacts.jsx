@@ -1,29 +1,47 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { profile } from '../data/profile.js';
 import { FaGithub, FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
 export default function Contact() {
   const [showModal, setShowModal] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+
+  // Tutup modal dengan tombol Escape
+  useEffect(() => {
+    if (!showModal) return;
+    const onKey = (e) => e.key === "Escape" && setShowModal(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [showModal]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
 
-    const res = await fetch("https://formspree.io/f/mdkzrwke", {
-      method: "POST",
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    });
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("https://formspree.io/f/mdkzrwke", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-    if (res.ok) {
-      form.reset();
-      setShowModal(true); 
-    } else {
-      alert("Terjadi kesalahan saat mengirim. Silakan coba lagi.");
+      if (res.ok) {
+        form.reset();
+        setShowModal(true);
+      } else {
+        setError("Terjadi kesalahan saat mengirim. Silakan coba lagi.");
+      }
+    } catch {
+      setError("Gagal terhubung. Periksa koneksi atau hubungi lewat WhatsApp.");
+    } finally {
+      setSending(false);
     }
   };
 
@@ -55,23 +73,29 @@ export default function Contact() {
           ></textarea>
           <button
             type="submit"
-            className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800"
+            disabled={sending}
+            className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Kirim
+            {sending ? "Mengirim\u2026" : "Kirim"}
           </button>
+          {error && (
+            <p role="alert" className="text-sm text-red-300">
+              {error}
+            </p>
+          )}
         </form>
 
         {/* MODAL SUCCESS */}
         {showModal && (
-          <div className="">
-
-          <div className="fixed z-10 inset-0 overflow-y-auto">
-            <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-
-
-              <span className="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
-
-              <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+          <div className="fixed z-50 inset-0" role="dialog" aria-modal="true" aria-labelledby="modal-judul">
+            {/* Backdrop */}
+            <div
+              className="absolute inset-0 bg-gray-500 opacity-75"
+              onClick={() => setShowModal(false)}
+              aria-hidden="true"
+            />
+            <div className="relative flex items-center justify-center min-h-full px-4">
+              <div className="inline-block bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
                 <div className="sm:flex sm:items-start">
                   <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
                     <svg
@@ -89,7 +113,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                    <h3 className="text-lg leading-6 font-medium text-gray-900">
+                    <h3 id="modal-judul" className="text-lg leading-6 font-medium text-gray-900">
                       Pesan Terkirim!
                     </h3>
                     <div className="mt-2">
@@ -103,6 +127,7 @@ export default function Contact() {
                   <button
                     onClick={() => setShowModal(false)}
                     type="button"
+                    autoFocus
                     className="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none transition sm:w-auto sm:text-sm"
                     >
                     Tutup
@@ -111,10 +136,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-              <div className="fixed inset-0 transition-opacity">
-                <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
-              </div>
-        </div>
         )}
 
         {/* Social Links */}
