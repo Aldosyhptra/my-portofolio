@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import dataPribadi from '../data';
+import { profile } from '../data/profile.js';
 
 export default function Home() {
   return (
@@ -19,10 +19,10 @@ export default function Home() {
         >
           <div className="mx-auto md:w-[30vw]">
             <p className="text-xl text-center md:text-start md:text-4xl font-bold mb-4 text-white">
-              Hi, saya {dataPribadi.name}
+              Hi, saya {profile.name}
             </p>
             <p className="text-base md:text-lg text-gray-300 max-w-2xl">
-              {dataPribadi.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif.
+              {profile.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif.
             </p>
             <p className="text-sm md:text-base text-gray-400 mt-2 max-w-2xl">
               Fresh graduate Sistem Informasi · tertarik pada integrasi AI.

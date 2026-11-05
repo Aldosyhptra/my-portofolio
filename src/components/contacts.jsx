@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import dataPribadi from '../data';
+import { profile } from '../data/profile.js';
 import { FaGithub, FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
@@ -121,19 +121,19 @@ export default function Contact() {
           <div className="flex flex-row md:flex-col items-center gap-2 md:gap-0">
             <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>
             <div className="flex flex-row md:flex-col items-center gap-2 my-5">
-              <a href={`https://github.com/${dataPribadi.github}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://github.com/${profile.github}`} target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://wa.me/${dataPribadi.phone}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://wa.me/${profile.phone}`} target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://instagram/${dataPribadi.instagram}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://instagram/${profile.instagram}`} target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={dataPribadi.linkedin} target="_blank" rel="noopener noreferrer">
+              <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://mail.google.com/mail/?view=cm&to=${dataPribadi.email}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} target="_blank" rel="noopener noreferrer">
                 <SiGmail className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
             </div>
