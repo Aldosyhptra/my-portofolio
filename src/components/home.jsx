@@ -18,9 +18,9 @@ export default function Home() {
           transition={{ duration: 1, ease: 'easeOut' }}
         >
           <div className="mx-auto md:w-[30vw]">
-            <p className="text-xl text-center md:text-start md:text-4xl font-bold mb-4 text-white">
+            <h1 className="text-xl text-center md:text-start md:text-4xl font-bold mb-4 text-white">
               Hi, saya {profile.name}
-            </p>
+            </h1>
             <p className="text-base md:text-lg text-gray-300 max-w-2xl">
               {profile.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif.
             </p>

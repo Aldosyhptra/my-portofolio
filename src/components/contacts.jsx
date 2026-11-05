@@ -36,16 +36,20 @@ export default function Contact() {
         <h2 className="text-3xl font-semibold mb-4">Hubungi Saya</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Honeypot Formspree — spam terisi otomatis dibuang; ganti dengan reCAPTCHA bila perlu */}
+          <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
           <input
             type="email"
             name="email"
             placeholder="Email kamu"
+            aria-label="Email kamu"
             required
             className="w-full p-2 border border-gray-300 rounded"
           />
           <textarea
             name="message"
             placeholder="Pesanmu"
+            aria-label="Pesanmu"
             required
             className="w-full p-2 border border-gray-300 rounded"
           ></textarea>
@@ -121,19 +125,19 @@ export default function Contact() {
           <div className="flex flex-row md:flex-col items-center gap-2 md:gap-0">
             <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>
             <div className="flex flex-row md:flex-col items-center gap-2 my-5">
-              <a href={`https://github.com/${profile.github}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://github.com/${profile.github}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FaGithub className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://wa.me/${profile.phone}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://wa.me/${profile.phone}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <FaWhatsapp className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://www.instagram.com/${profile.instagram}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://www.instagram.com/${profile.instagram}`} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+              <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedin className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} target="_blank" rel="noopener noreferrer" aria-label="Email">
                 <SiGmail className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
             </div>

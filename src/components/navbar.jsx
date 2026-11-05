@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* Hamburger Button - only visible on small screens */}
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
+          <button onClick={toggleMenu} aria-label={isOpen ? "Tutup menu" : "Buka menu"}>
             {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
           </button>
         </div>
