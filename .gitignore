@@ -28,3 +28,6 @@ AGENTS.md
 *.njsproj
 *.sln
 *.sw?
+
+# Notepad proyek (tidak untuk repo publik)
+NOTEPAD.md
