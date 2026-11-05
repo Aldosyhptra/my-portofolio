@@ -75,12 +75,9 @@ export default function About() {
         transition={{ duration: 1, ease: 'easeOut' }}
       >
 
-                {skillGroups.map((group, i) => (
-          <details key={group.label} className="group w-full max-w-3xl mx-auto mb-4" open={i === 0}>
-            <summary className="flex items-center justify-center gap-2 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-              <h3 className="text-xl font-semibold">{group.label}</h3>
-              <span aria-hidden="true" className="text-lg transition-transform group-open:rotate-180">▾</span>
-            </summary>
+                {skillGroups.map((group) => (
+          <div key={group.label} className="w-full max-w-3xl mx-auto mb-8">
+            <h3 className="text-xl font-semibold mb-2 text-center">{group.label}</h3>
             <div className="flex flex-wrap justify-center items-center gap-6 mt-6 text-white">
               {group.items.map((item) => {
                 const Icon = iconMap[item] || FaCode;
@@ -92,7 +89,7 @@ export default function About() {
                 );
               })}
             </div>
-          </details>
+          </div>
         ))}
 
       </motion.div>
