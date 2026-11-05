@@ -1,5 +1,6 @@
 // Sumber kebenaran daftar Proyek Unggulan (PRD bagian 7). Tidak bergantung pada GitHub API.
 // status: "selesai" | "dikerjakan" | null (null = lencana tidak ditampilkan, jangan ditebak).
+// badges: string | { text, url } — url = tautan bukti (postingan resmi/dokumen), null sampai tersedia.
 // image: null → kartu menampilkan placeholder netral; TODO(owner): tangkapan layar asli per proyek.
 export const projects = [
   {
@@ -39,7 +40,7 @@ export const projects = [
     summary:
       "Aplikasi pemesanan guide, porter, dan penyewaan alat mendaki — Juara 1 Innovatect 2024.",
     stack: ["Flask", "Jinja", "Bootstrap"],
-    badges: ["Juara 1 · Innovatect 2024"],
+    badges: [{ text: "Juara 1 · Innovatect 2024", url: null }],
     repo: "https://github.com/Aldosyhptra/MountServ",
     demo: null,
     image: null,

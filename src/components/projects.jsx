@@ -14,9 +14,7 @@ function ProjectCard({ project }) {
           loading="lazy"
         />
       ) : (
-        <div className="w-full h-40 rounded-lg mb-3 bg-gray-200 flex items-center justify-center text-gray-600 text-sm">
-          Tangkapan layar menyusul
-        </div>
+        <div className="w-full h-40 rounded-lg mb-3 bg-gray-200" aria-hidden="true" />
       )}
       <h3 className="px-2 text-lg text-black font-semibold">{title}</h3>
       <p className="px-2 text-xs font-semibold text-blue-700 mb-1">{role}</p>
@@ -34,11 +32,27 @@ function ProjectCard({ project }) {
 
       {badges.length > 0 && (
         <div className="px-2 mb-2 flex flex-wrap gap-1">
-          {badges.map((b) => (
-            <span key={b} className="px-2 py-0.5 text-xs bg-amber-100 text-amber-800 rounded-full font-semibold">
-              🏆 {b}
-            </span>
-          ))}
+          {badges.map((b) => {
+            const text = typeof b === "string" ? b : b.text;
+            const url = typeof b === "string" ? null : b.url;
+            const cls = "px-2 py-0.5 text-xs bg-amber-100 text-amber-800 rounded-full font-semibold";
+            return url ? (
+              <a
+                key={text}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${cls} hover:underline`}
+                title="Lihat bukti"
+              >
+                🏆 {text}
+              </a>
+            ) : (
+              <span key={text} className={cls}>
+                🏆 {text}
+              </span>
+            );
+          })}
         </div>
       )}
 
