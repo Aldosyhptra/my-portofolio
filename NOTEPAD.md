@@ -101,7 +101,8 @@ Fase 3 dikerjakan di branch `fase-2` sesuai arahan pemilik (PR di-merge setelah 
 - Ganti nama repo `SCS_Project` → "CSC" (opsional; kartu sudah tampil dengan nama "CSC Group Website").
 - ~~Peran di `codelens-web`~~ → sudah dikonfirmasi: Front-End Developer.
 - Status repo `AyamKuy`, `manajemen-pengeluaran`, `InspeksiMobilJogja`, `digitalisasi-surat`, `stickersukicau` (layak tampil / milik klien / belum matang).
-- Screenshot proyek (dikirim pemilik sebagian, satu per satu) untuk proyek yang punya UI.
-- URL postingan Instagram prodi tentang kemenangan Innovatect (dikirim pemilik) → isi ke `projects.js` `badges[0].url` MountServ.
+- Screenshot proyek (dikirim pemilik menyusul, satu per satu) untuk proyek yang punya UI.
+- Folder Google Drive dokumen pendukung (PRD 6.6) — bisa menampung file bukti IG di atas.
+- ~~URL postingan IG Innovatect~~ → sudah dipasang: `https://www.instagram.com/p/C8HYT82SPAk/` (bukti: pengumuman resmi @siunjaya "Juara 1 Tim 11 - Mountserv" + dokumentasi penerimaan hadiah).
 - Angka dampak (jumlah halaman, skor Lighthouse per proyek) bila sudah diukur.
 - Apakah akun Instagram `aldosyhptraa` layak ditampilkan sebagai kontak profesional.
