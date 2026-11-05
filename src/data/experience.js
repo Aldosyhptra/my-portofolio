@@ -1,15 +1,15 @@
 // Pengalaman kerja — sesuai AGENTS.md bagian 6. Dirender di bagian Pengalaman (Fase 4).
 export const experiences = [
   {
-    role: "Front-End Developer Intern",
+    role: "Web Developer Intern (Front-End)",
     company: "Sevenpion",
     location: "Yogyakarta",
     period: "Juli – Agustus 2025",
     items: [
-      "Membangun antarmuka responsif Neosia TC (platform training center software) dengan Laravel Blade.",
-      "Menyusun antarmuka responsif Pinasthika (platform komunitas industri kreatif, desain, dan komunikasi) dengan HTML, CSS, dan Bootstrap.",
+      "Membangun antarmuka responsif Neosia TC (platform training center software) dengan Laravel Blade, mencakup halaman profil perusahaan, formulir kontak, dan panel admin.",
+      "Menyusun antarmuka responsif Pinasthika (platform komunitas industri kreatif, desain, dan komunikasi) dengan HTML, CSS, dan Bootstrap, mencakup halaman profil perusahaan dan formulir kontak.",
     ],
-    note: "Repo bersifat privat (proyek perusahaan).",
+    note: "Repo bersifat privat (proyek perusahaan). 1 proyek produksi.",
   },
   {
     role: "Front-End Developer (Freelance)",
