@@ -10,7 +10,7 @@ Update tiap fase. Jangan dihapus.
 | 0 | Audit | ✅ Selesai (5 Nov 2026) |
 | 1 | Koreksi konten cepat | ✅ Selesai (5 Nov 2026) |
 | 2 | Skills dan data | ✅ Selesai (5 Nov 2026) |
-| 3 | Project | ⬜ Belum |
+| 3 | Project | ✅ Selesai (5 Nov 2026) |
 | 4 | Bagian baru (Pengalaman, Pencapaian) | ⬜ Belum |
 | 5 | Kontak, sosial, dan CV | ⬜ Belum |
 | 6 | Kualitas (Lighthouse, responsif) | ⬜ Belum |
@@ -58,6 +58,24 @@ react-router-dom/meshline/ogl/lucide-react); sisa 5 runtime + 1 devDep baru `esl
 (alasan AGENTS §4: memperbaiki false-positive `no-unused-vars` untuk pemakaian JSX — tanpa plugin ini
 `motion` selalu dianggap tak terpakai). Build bersih; lint 0 error, 1 warning lama navbar (handleScroll).
 
+## Fase 3 — rombak bagian Project (5 Nov 2026)
+
+`data/projects.js` diisi 8 Proyek Unggulan urut sesuai PRD §7 (nama repo diverifikasi via GitHub API:
+`telogo-putri-project`, `indot5-synthesis-mdebertav3-detection`, `MountServ`, `pengenalan-emosi`,
+`SearchEngineNutriFood`, `SCS_Project`, `codelens-web`, `my-portofolio`). Ringkasan kartu memakai
+deskripsi repo milik pemilik sendiri. `projects.jsx` ditulis ulang: sumber data statis (GitHub API
+tidak dipakai lagi — status "Selesai"/"Masih Dikerjakan" otomatis palsu dan fallback "Tidak ada
+deskripsi"/"N/A" ikut hilang), kartu memuat peran, tag stack, lencana bukti, tombol bersyarat
+("Kode"/"Demo" hanya bila ada tujuan), dan slot gambar placeholder netral.
+Keputusan pemilik (5 Nov 2026): peran codelens-web = Front-End Developer; kartu CSC Group tampil
+dengan link repo SCS_Project (izin klien aman). Status NutriFood dan codelens-web = null
+(tanpa lencana) karena tidak ada bukti — jangan ditebak.
+
+Deviasi sadar: (1) pengayaan GitHub API (bintang) TIDAK diimplementasi — tidak ada kriteria
+penerimaan yang menuntutnya, dan data statis sudah jadi sumber kebenaran; pintu terbuka bila perlu
+(tambah `lib/github.js` best-effort). (2) Bagian "Proyek Lainnya" (opsional di PRD) tidak dibuat.
+Fase 3 dikerjakan di branch `fase-2` sesuai arahan pemilik (PR di-merge setelah fase ini).
+
 ## Keputusan pemilik (5 Nov 2026)
 
 1. Hapus semua kode mati dan dependency tak terpakai.
@@ -73,8 +91,8 @@ react-router-dom/meshline/ogl/lucide-react); sisa 5 runtime + 1 devDep baru `esl
 - URL folder Google Drive bukti (sertifikat, penghargaan, HKI).
 - Jumlah tim peserta Innovatect dan Technovation (bila diketahui).
 - Nama skema BNSP persis, nama LSP, dan status akreditasi SINTA jurnal (jika boleh diklaim).
-- Izin klien CSC untuk repo `SCS_Project` + keputusan penamaan.
-- Peran pemilik di `codelens-web` untuk kartu proyek (Fase 3) — bagian Skills sudah beres (dikonfirmasi mengerjakan codelens-web).
+- Ganti nama repo `SCS_Project` → "CSC" (opsional; kartu sudah tampil dengan nama "CSC Group Website").
+- ~~Peran di `codelens-web`~~ → sudah dikonfirmasi: Front-End Developer.
 - Status repo `AyamKuy`, `manajemen-pengeluaran`, `InspeksiMobilJogja`, `digitalisasi-surat`, `stickersukicau` (layak tampil / milik klien / belum matang).
 - Screenshot atau link demo untuk proyek unggulan.
 - Angka dampak (jumlah halaman, skor Lighthouse per proyek) bila sudah diukur.
