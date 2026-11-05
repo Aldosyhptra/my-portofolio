@@ -142,3 +142,22 @@ yang menulis reCAPTCHA v2 — penggantinya setara untuk tujuan anti-spam, tanpa 
 - ~~URL postingan IG Innovatect~~ → sudah dipasang: `https://www.instagram.com/p/C8HYT82SPAk/` (bukti: pengumuman resmi @siunjaya "Juara 1 Tim 11 - Mountserv" + dokumentasi penerimaan hadiah).
 - Angka dampak (jumlah halaman, skor Lighthouse per proyek) bila sudah diukur.
 - Apakah akun Instagram `aldosyhptraa` layak ditampilkan sebagai kontak profesional.
+
+## Review HR + Senior Dev (6 Nov 2026)
+
+Temuan review portofolio live: 2 kartu unggulan (Tlogo Putri & IndoT5) tampil placeholder abu-abu (terbaca
+sebagai gambar rusak), klaim peran Tlogo Putri tanpa keterangan tim (repo = fork 10 kontributor), tanpa
+demo live, modal kontak tanpa Escape/loading state, navbar tanpa active state.
+
+Perbaikan yang dikerjakan:
+
+1. Thumbnail diagram `img/proyek/tlogo-putri.webp` + `indot5-detection.webp` (diagram alur digambar sendiri,
+   gaya konsisten dark-navy). TODO(owner): kalau foto booth Technovation tersedia, boleh ganti thumbnail
+   Tlogo Putri dengan foto asli (bukti sosial lebih kuat).
+2. Tlogo Putri: summary ditambah "Dikerjakan bersama tim; bagian saya pipeline back-end."
+3. Card "Portofolio Ini" kini punya `demo` live (URL Vercel).
+4. `contacts.jsx`: tombol Kirim punya state loading ("Mengirim…"), error inline `role="alert"` (tanpa
+   alert()), modal sukses pakai `role="dialog"` + backdrop di bawah konten + tutup via Escape/klik backdrop.
+5. `navbar.jsx`: active state scroll-spy (`aria-current`), menu desktop+mobile dipetakan dari array `LINKS`.
+
+Sisa kartu tanpa gambar (TODO owner): nutrifood & csc-group. Demo codelens-web ditunda (konten masih dummy).

@@ -5,7 +5,7 @@ function ProjectCard({ project }) {
   const { title, role, summary, stack, badges, repo, demo, image, status } = project;
   return (
     <div className="bg-gray-100 flex flex-col h-full shadow-lg rounded-xl p-4 hover:shadow-xl transition group hover:bg-white">
-      {/* Slot gambar — TODO(owner): ganti dengan tangkapan layar asli per proyek */}
+      {/* Slot gambar — TODO(owner): sisa nutrifood & csc-group masih placeholder */}
       {image ? (
         <img
           src={image}
