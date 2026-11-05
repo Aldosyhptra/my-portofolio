@@ -127,7 +127,7 @@ export default function Contact() {
               <a href={`https://wa.me/${profile.phone}`} target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://instagram/${profile.instagram}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://www.instagram.com/${profile.instagram}`} target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
