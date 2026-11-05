@@ -103,7 +103,7 @@ export const projects = [
     badges: [],
     repo: "https://github.com/Aldosyhptra/codelens-web",
     demo: null,
-    image: null,
+    image: "img/proyek/codelens-web.png",
     status: null,
     featured: true,
     order: 7,
