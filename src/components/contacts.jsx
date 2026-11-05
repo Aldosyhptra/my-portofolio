@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import dataPribadi from '../data';
+import { profile } from '../data/profile.js';
 import { FaGithub, FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
@@ -33,7 +33,7 @@ export default function Contact() {
       className="bg-gradient-to-b to-gray-700 px-10 md:px-0 my-10 md:mb-0 text-start flex flex-col md:flex-row items-center justify-center w-full h-full mx-auto overflow-hidden"
     >
       <div className="p-8 max-w-xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
+        <h2 className="text-3xl font-semibold mb-4">Hubungi Saya</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -53,7 +53,7 @@ export default function Contact() {
             type="submit"
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
-            Send
+            Kirim
           </button>
         </form>
 
@@ -116,24 +116,24 @@ export default function Contact() {
         {/* Social Links */}
         <aside className="md:fixed relative md:top-1/2 md:left-0 md:-translate-y-1/2 md:z-50 p-2 md:p-4 flex flex-col items-center justify-center gap-3 md:gap-0">
           <p className="md:rotate-90 md:mb-10 md:ml-1 ml-0 -mb-5 text-gray-500 dark:text-gray-400 cursor-default select-none">
-            Reach Me
+            Media Sosial
           </p>
           <div className="flex flex-row md:flex-col items-center gap-2 md:gap-0">
             <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>
             <div className="flex flex-row md:flex-col items-center gap-2 my-5">
-              <a href={`https://github.com/${dataPribadi.github}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://github.com/${profile.github}`} target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://wa.me/${dataPribadi.phone}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://wa.me/${profile.phone}`} target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://instagram/${dataPribadi.instagram}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://instagram/${profile.instagram}`} target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={dataPribadi.linkedin} target="_blank" rel="noopener noreferrer">
+              <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
-              <a href={`https://mail.google.com/mail/?view=cm&to=${dataPribadi.email}`} target="_blank" rel="noopener noreferrer">
+              <a href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} target="_blank" rel="noopener noreferrer">
                 <SiGmail className="text-3xl text-gray-500 hover:text-white transition-all" />
               </a>
             </div>

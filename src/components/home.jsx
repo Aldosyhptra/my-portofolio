@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import dataPribadi from '../data';
+import { profile } from '../data/profile.js';
 
 export default function Home() {
   return (
@@ -19,10 +19,10 @@ export default function Home() {
         >
           <div className="mx-auto md:w-[30vw]">
             <p className="text-xl text-center md:text-start md:text-4xl font-bold mb-4 text-white">
-              Hi, saya {dataPribadi.name}
+              Hi, saya {profile.name}
             </p>
             <p className="text-base md:text-lg text-gray-300 max-w-2xl">
-              {dataPribadi.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif.
+              {profile.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif.
             </p>
             <p className="text-sm md:text-base text-gray-400 mt-2 max-w-2xl">
               Fresh graduate Sistem Informasi · tertarik pada integrasi AI.
@@ -36,12 +36,12 @@ export default function Home() {
             >
               <a href="/file/CV_Aldo_Syahputra.pdf" download>
                 <button className="bg-white border-white border text-black px-8 py-3 transform hover:scale-105 hover:text-white hover:border-black hover:bg-black transition-all duration-300">
-                  Download CV
+                  Unduh CV
                 </button>
               </a>
               <a href="#contact">
                 <button className="bg-transparent border-white border text-white px-8 py-3 transform hover:scale-105 hover:text-black hover:bg-white transition-all duration-300">
-                  Contact Me
+                  Hubungi Saya
                 </button>
               </a>
             </motion.div>
