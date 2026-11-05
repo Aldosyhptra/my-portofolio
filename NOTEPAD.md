@@ -12,8 +12,8 @@ Update tiap fase. Jangan dihapus.
 | 2 | Skills dan data | ✅ Selesai (5 Nov 2026) |
 | 3 | Project | ✅ Selesai (5 Nov 2026) |
 | 4 | Pengalaman + Pencapaian | ✅ Selesai (5 Nov 2026) |
-| 5 | Kontak, sosial, dan CV | ⬜ Belum |
-| 6 | Kualitas (Lighthouse, responsif) | ⬜ Belum |
+| 5 | Kontak & Sosial | ⬜ Sebagian (5 Nov 2026) — IG fix + robots.txt; menunggu reCAPTCHA + domain |
+| 6 | Kualitas (Lighthouse, responsif) | ⬜ Sebagian (5 Nov 2026) — gambar WebP (4,2 MB → 217 KB) |
 
 ## Fase 0 — Hasil audit (5 Nov 2026)
 
@@ -92,6 +92,13 @@ Animasi stagger fade-up memakai **framer-motion** (`whileInView`) — AGENTS §9
 framer-motion; markup `data-aos` di PRD §6.3 tidak dipakai (AOS tidak terpasang, tanpa dep baru).
 Tombol "Lihat dokumen pendukung" (PRD §6.6) sengaja belum dibuat — menunggu URL folder Google
 Drive dari pemilik (TODO di bawah).
+
+## Fase 5/6 — pekerjaan tidak-terblokir (5 Nov 2026)
+
+Perbaikan bug tautan Instagram di bagian Kontak (`https://instagram/...` → `https://www.instagram.com/...`).
+`public/robots.txt` ditambahkan (izinkan crawl penuh; baris sitemap menyusul setelah domain pasti).
+Empat tangkapan layar proyek dikompres PNG → WebP (maks 1200px, kualitas 80): total 4.239 KB → 217 KB
+(-95%), file PNG asli dihapus. Tertunda: reCAPTCHA v2 (butuh keys) dan `sitemap.xml` (butuh URL domain).
 
 ## Keputusan pemilik (5 Nov 2026)
 
