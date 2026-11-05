@@ -9,7 +9,7 @@ Update tiap fase. Jangan dihapus.
 |---|---|---|
 | 0 | Audit | ✅ Selesai (5 Nov 2026) |
 | 1 | Koreksi konten cepat | ✅ Selesai (5 Nov 2026) |
-| 2 | Skills dan data | ⬜ Belum |
+| 2 | Skills dan data | ✅ Selesai (5 Nov 2026) |
 | 3 | Project | ⬜ Belum |
 | 4 | Bagian baru (Pengalaman, Pencapaian) | ⬜ Belum |
 | 5 | Kontak, sosial, dan CV | ⬜ Belum |
@@ -47,6 +47,17 @@ Penyamaan bahasa UI (keputusan pemilik 5 Nov 2026) dikerjakan sebagai lanjutan d
 semua label UI jadi Bahasa Indonesia. Masih tersisa: `lang="id"`, Open Graph, favicon check, `robots.txt`
 (masuk SEO/Fase 6); tes tombol CV tetap Fase 5.
 
+## Fase 2 — pemisahan data dan skills (5 Nov 2026)
+
+Folder `src/data/` dibuat (named export semua): `profile.js`, `skills.js`, `experience.js`,
+`achievements.js` (3 ekspor: awards, iprAndCertifications, publications), `projects.js` (kerangka, diisi Fase 3).
+`data.jsx` lama dihapus. Skills ditata jadi 7 kelompok AGENTS §6; Next.js dan TypeScript masuk setelah
+pemilik mengonfirmasi mengerjakan codelens-web (5 Nov 2026). Kode mati dihapus (card.jsx, orb.jsx,
+App.css, orb.css, react.svg) + 11 dependency dibuang (three/react-three/gsap/reactbits/react-simple-animate/
+react-router-dom/meshline/ogl/lucide-react); sisa 5 runtime + 1 devDep baru `eslint-plugin-react`
+(alasan AGENTS §4: memperbaiki false-positive `no-unused-vars` untuk pemakaian JSX — tanpa plugin ini
+`motion` selalu dianggap tak terpakai). Build bersih; lint 0 error, 1 warning lama navbar (handleScroll).
+
 ## Keputusan pemilik (5 Nov 2026)
 
 1. Hapus semua kode mati dan dependency tak terpakai.
@@ -63,7 +74,7 @@ semua label UI jadi Bahasa Indonesia. Masih tersisa: `lang="id"`, Open Graph, fa
 - Jumlah tim peserta Innovatect dan Technovation (bila diketahui).
 - Nama skema BNSP persis, nama LSP, dan status akreditasi SINTA jurnal (jika boleh diklaim).
 - Izin klien CSC untuk repo `SCS_Project` + keputusan penamaan.
-- Konfirmasi peran di `codelens-web` (menentukan Next.js/TypeScript muncul di Skills).
+- Peran pemilik di `codelens-web` untuk kartu proyek (Fase 3) — bagian Skills sudah beres (dikonfirmasi mengerjakan codelens-web).
 - Status repo `AyamKuy`, `manajemen-pengeluaran`, `InspeksiMobilJogja`, `digitalisasi-surat`, `stickersukicau` (layak tampil / milik klien / belum matang).
 - Screenshot atau link demo untuk proyek unggulan.
 - Angka dampak (jumlah halaman, skor Lighthouse per proyek) bila sudah diukur.
