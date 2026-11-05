@@ -83,7 +83,7 @@ export default function Projects() {
     <section id="project" className="py-10 ">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6 text-center text-white">
-          Project Saya di GitHub
+          Proyek Saya di GitHub
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
           {repos.map((repo) => {

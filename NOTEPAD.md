@@ -43,9 +43,9 @@ About ditulis ulang 2 paragraf rata kiri sesuai 6.2, ejaan HTML/JavaScript, plac
 meta title + description diisi. Tambahan (dicabut dari Fase 5, karena tautan mati): href CV `/dist/file/` → `/file/`
 dan `alt="hero"` → `alt="Potret Aldo Syahputra"` sesuai 6.1. Build bersih.
 
-Belum dikerjakan (tercatat untuk fase lanjutan): tombol "Send" masih Inggris dan label judul section
-("About Me", "Contact Me", "Reach Me") masih campur — keputusan bahasa ada di tangan pemilik; `lang="id"`,
-Open Graph, favicon check, `robots.txt` masuk SEO/Fase 6; ganti file CV + tes tombol tetap Fase 5.
+Penyamaan bahasa UI (keputusan pemilik 5 Nov 2026) dikerjakan sebagai lanjutan di branch Fase 2:
+semua label UI jadi Bahasa Indonesia. Masih tersisa: `lang="id"`, Open Graph, favicon check, `robots.txt`
+(masuk SEO/Fase 6); tes tombol CV tetap Fase 5.
 
 ## Keputusan pemilik (5 Nov 2026)
 
@@ -54,6 +54,8 @@ Open Graph, favicon check, `robots.txt` masuk SEO/Fase 6; ganti file CV + tes to
 3. File `public/file/CV_Aldo_Syahputra.pdf` = CV terbaru; cukup perbaiki link-nya.
 4. LinkedIn `linkedin.com/in/aldo-syahputra-87b625373` = akun benar.
 5. `PRD.md`/`AGENTS.md` masuk `.gitignore` (tidak naik GitHub). Ditambah aturan `.env` pencegah kebocoran secret.
+6. Semua label UI diseragamkan Bahasa Indonesia, termasuk tombol hero "Unduh CV"/"Hubungi Saya" — PRD 6.1 menulis tombol
+   itu dalam Inggris; deviasi ini disadari dan dicatat.
 
 ## TODO(owner) tersisa
 

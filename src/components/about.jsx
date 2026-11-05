@@ -18,7 +18,7 @@ export default function About() {
       <div>
         <span className="flex items-center mb-5 md:mb-10">
           <span className="h-px flex-1 bg-gray-300"></span>
-          <span className="shrink-0 px-4 text-white text-xl md:text-3xl">About Me</span>
+          <span className="shrink-0 px-4 text-white text-xl md:text-3xl">Tentang Saya</span>
           <span className="h-px flex-1 bg-gray-300"></span>
         </span>
         <p className="text-gray-300 max-w-3xl mx-auto mb-4">

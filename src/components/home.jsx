@@ -36,12 +36,12 @@ export default function Home() {
             >
               <a href="/file/CV_Aldo_Syahputra.pdf" download>
                 <button className="bg-white border-white border text-black px-8 py-3 transform hover:scale-105 hover:text-white hover:border-black hover:bg-black transition-all duration-300">
-                  Download CV
+                  Unduh CV
                 </button>
               </a>
               <a href="#contact">
                 <button className="bg-transparent border-white border text-white px-8 py-3 transform hover:scale-105 hover:text-black hover:bg-white transition-all duration-300">
-                  Contact Me
+                  Hubungi Saya
                 </button>
               </a>
             </motion.div>

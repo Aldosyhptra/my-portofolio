@@ -33,7 +33,7 @@ export default function Contact() {
       className="bg-gradient-to-b to-gray-700 px-10 md:px-0 my-10 md:mb-0 text-start flex flex-col md:flex-row items-center justify-center w-full h-full mx-auto overflow-hidden"
     >
       <div className="p-8 max-w-xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
+        <h2 className="text-3xl font-semibold mb-4">Hubungi Saya</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -53,7 +53,7 @@ export default function Contact() {
             type="submit"
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
-            Send
+            Kirim
           </button>
         </form>
 
@@ -116,7 +116,7 @@ export default function Contact() {
         {/* Social Links */}
         <aside className="md:fixed relative md:top-1/2 md:left-0 md:-translate-y-1/2 md:z-50 p-2 md:p-4 flex flex-col items-center justify-center gap-3 md:gap-0">
           <p className="md:rotate-90 md:mb-10 md:ml-1 ml-0 -mb-5 text-gray-500 dark:text-gray-400 cursor-default select-none">
-            Reach Me
+            Media Sosial
           </p>
           <div className="flex flex-row md:flex-col items-center gap-2 md:gap-0">
             <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>

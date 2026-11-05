@@ -38,28 +38,28 @@ const Navbar = () => {
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                home
+                beranda
             </span>
           </a></li>
           <li><a href="#about" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                about
+                tentang
             </span>
           </a></li>
           <li><a href="#project" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                project
+                proyek
             </span>
           </a></li>
           <li><a href="#contact" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                contact
+                kontak
             </span>
           </a></li>
         </ul>
@@ -72,28 +72,28 @@ const Navbar = () => {
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                home
+                beranda
             </span>
           </a></li>
           <li><a onClick={toggleMenu} href="#about" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                about
+                tentang
             </span>
           </a></li>
           <li><a onClick={toggleMenu} href="#project" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                project
+                proyek
             </span>
           </a></li>
           <li><a onClick={toggleMenu} href="#contact" className="text-gray-300 transition-all transition-200 hover:text-white hover:underline ">
             <span className="relative capitalize inline-block text-gray-300 hover:text-white transition-colors duration-200
                 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white
                 hover:after:w-full after:transition-all after:duration-300">
-                contact
+                kontak
             </span>
           </a></li>
         </ul>
