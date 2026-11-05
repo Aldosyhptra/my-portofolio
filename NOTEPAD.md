@@ -112,7 +112,8 @@ Drive dari pemilik (TODO di bawah).
 - ~~Peran di `codelens-web`~~ → sudah dikonfirmasi: Front-End Developer.
 - Status repo `AyamKuy`, `manajemen-pengeluaran`, `InspeksiMobilJogja`, `digitalisasi-surat`, `stickersukicau` (layak tampil / milik klien / belum matang).
 - Screenshot proyek (dikirim pemilik menyusul, satu per satu) untuk proyek yang punya UI. ✅ 4/6: `portofolio.png`, `codelens-web.png`, `mountserv.png`, `pengenalan-emosi.png` (di `img/proyek/`). Catatan: PNG 1,58 MB — perlu dikompres/webp saat Fase 6 (anggaran gambar).
-- Folder Google Drive dokumen pendukung (PRD 6.6) — bisa menampung file bukti IG di atas.
+- ~~Folder Drive dokumen pendukung~~ → dua folder diterima (5 Nov 2026): pengargaan & hak cipta `1X30wlR1GMQJCeBMEQ7LLvzHJ4Yfgu3WE` (3 PDF HKI + Penghargaan Technovation), sertifikasi `1lRDM5Wf44tsj6zZjmhCbQ_G-GX53DrWw` (BNSP + **sertifikasi n8n**). Sudah dipasang sebagai tombol "Lihat dokumen pendukung" + tautan per kartu. Innovatect tetap tanpa sertifikat (bukti: postingan IG).
+- Konfirmasi: apakah **sertifikasi n8n** (ada di folder sertifikasi) perlu masuk `achievements.js`? Data kanonik AGENTS §6 hanya mencatat BNSP.
 - ~~URL postingan IG Innovatect~~ → sudah dipasang: `https://www.instagram.com/p/C8HYT82SPAk/` (bukti: pengumuman resmi @siunjaya "Juara 1 Tim 11 - Mountserv" + dokumentasi penerimaan hadiah).
 - Angka dampak (jumlah halaman, skor Lighthouse per proyek) bila sudah diukur.
 - Apakah akun Instagram `aldosyhptraa` layak ditampilkan sebagai kontak profesional.
