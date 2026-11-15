@@ -1,5 +1,5 @@
 // Sumber kebenaran daftar Proyek Unggulan (PRD bagian 7). Tidak bergantung pada GitHub API.
-// status: "selesai" | "dikerjakan" | null (null = lencana tidak ditampilkan, jangan ditebak).
+// status: "selesai" | "dikerjakan" | null. Lencana hanya dirender untuk status selain "selesai" (semua kartu sama = informasi nol).
 // badges: string | { text, url } — url = tautan bukti (postingan resmi/dokumen), null sampai tersedia.
 // image: null → kartu menampilkan placeholder netral.
 export const projects = [

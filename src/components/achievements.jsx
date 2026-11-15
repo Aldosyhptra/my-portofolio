@@ -9,20 +9,20 @@ function AchievementCard({ label, title, meta, url, evidence, delay }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay }}
-      className="bg-gray-100 rounded-xl p-4 shadow-lg flex flex-col h-full"
+      className="bg-zinc-900/60 border border-white/10 rounded-xl p-4 shadow-lg flex flex-col h-full hover:border-accent-400/40 transition-colors"
     >
-      <p className="text-xs font-semibold text-blue-700 mb-1">{label}</p>
-      <h3 className="font-semibold text-black">{title}</h3>
-      <p className="text-sm text-gray-600">{meta}</p>
+      <p className="font-mono text-[11px] uppercase tracking-wider text-accent-400 mb-1">{label}</p>
+      <h3 className="font-display font-semibold text-white">{title}</h3>
+            <p className="text-sm text-zinc-400">{meta}</p>
       {(url || evidence) && (
         <div className="mt-auto pt-4 flex gap-3">
           {evidence && (
-            <a href={evidence} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline text-sm">
+            <a href={evidence} target="_blank" rel="noopener noreferrer" className="text-accent-300 hover:text-accent-400 hover:underline text-sm">
               Dokumen →
             </a>
           )}
           {url && (
-            <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline text-sm">
+            <a href={url} target="_blank" rel="noopener noreferrer" className="text-accent-300 hover:text-accent-400 hover:underline text-sm">
               Lihat →
             </a>
           )}
@@ -53,11 +53,13 @@ export default function Achievements() {
     <section id="pencapaian" className="py-10">
       <div className="max-w-5xl mx-auto px-4">
         <SectionHeader num="03" title="Pencapaian & Publikasi" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-stretch">
-          {cards.map((c, i) => (
-            <AchievementCard key={c.title} {...c} delay={(i % 3) * 0.1} />
-          ))}
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4 items-stretch">
+                  {cards.map((c, i) => (
+                    <div key={c.title} className={i < 3 ? "md:col-span-2" : "md:col-span-3"}>
+                      <AchievementCard {...c} delay={(i % 3) * 0.1} />
+                    </div>
+                  ))}
+                </div>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
                   {evidenceFolders.map((f) => (
                     <a
@@ -65,7 +67,7 @@ export default function Achievements() {
                       href={f.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 text-sm font-semibold"
+                      className="inline-block px-4 py-2 bg-accent-600 text-white rounded-lg hover:bg-accent-500 text-sm font-semibold"
                     >
                       {f.label}
                     </a>

@@ -52,8 +52,8 @@ const Navbar = () => {
             className={
               "rounded-full px-3.5 py-1.5 text-sm capitalize transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 " +
               (active === id
-                ? "bg-white/10 text-white"
-                : "text-gray-300 hover:bg-white/5 hover:text-white")
+                              ? "bg-accent-500/20 text-accent-300"
+                              : "text-gray-300 hover:bg-white/5 hover:text-white")
             }
           >
             {label}
@@ -75,7 +75,7 @@ const Navbar = () => {
                 aria-current={active === id ? "page" : undefined}
                 className={
                   "flex flex-col items-center gap-0.5 py-2.5 text-[10px] capitalize transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white/60 " +
-                  (active === id ? "text-white" : "text-gray-400")
+                  (active === id ? "text-accent-300" : "text-gray-400")
                 }
               >
                 <Icon

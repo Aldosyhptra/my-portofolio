@@ -80,7 +80,7 @@ export default function About() {
                 const Icon = iconMap[item] || FaCode;
                 return (
                   <div key={item} className="flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-full px-3 py-1.5 transition-all">
-                    <Icon aria-hidden="true" className="w-4 h-4 text-cyan-400 shrink-0" />
+                    <Icon aria-hidden="true" className="w-4 h-4 text-accent-400 shrink-0" />
                     <span className="text-sm text-white">{item}</span>
                   </div>
                 );

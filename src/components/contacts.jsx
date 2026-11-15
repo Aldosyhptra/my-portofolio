@@ -49,7 +49,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-b to-gray-700 px-10 md:px-0 my-10 md:mb-0 text-start flex flex-col md:flex-row items-center justify-center w-full h-full mx-auto overflow-hidden"
+      className="bg-gradient-to-b to-zinc-900 px-10 md:px-0 my-10 md:mb-0 text-start flex flex-col md:flex-row items-center justify-center w-full h-full mx-auto overflow-hidden"
     >
       <div className="p-8 max-w-xl mx-auto">
         <SectionHeader num="05" title="Hubungi Saya" />
@@ -63,19 +63,19 @@ export default function Contact() {
             placeholder="Email kamu"
             aria-label="Email kamu"
             required
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full px-3 py-2 rounded-lg border border-white/20 bg-zinc-900 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent-500/60 focus:border-accent-400"
           />
           <textarea
             name="message"
             placeholder="Pesanmu"
             aria-label="Pesanmu"
             required
-            className="w-full p-2 border border-gray-300 rounded"
+            className="w-full px-3 py-2 rounded-lg border border-white/20 bg-zinc-900 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent-500/60 focus:border-accent-400"
           ></textarea>
           <button
             type="submit"
             disabled={sending}
-            className="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 disabled:opacity-60 disabled:cursor-not-allowed"
+            className="bg-accent-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-accent-500 disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
           >
             {sending ? "Mengirim\u2026" : "Kirim"}
           </button>
@@ -148,19 +148,19 @@ export default function Contact() {
             <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>
             <div className="flex flex-row md:flex-col items-center gap-2 my-5">
               <a href={`https://github.com/${profile.github}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <FaGithub aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <FaGithub aria-hidden="true" className="text-3xl text-zinc-500 hover:text-accent-300 transition-all" />
               </a>
               <a href={`https://wa.me/${profile.phone}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <FaWhatsapp aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <FaWhatsapp aria-hidden="true" className="text-3xl text-zinc-500 hover:text-accent-300 transition-all" />
               </a>
               <a href={`https://www.instagram.com/${profile.instagram}`} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FaInstagram aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <FaInstagram aria-hidden="true" className="text-3xl text-zinc-500 hover:text-accent-300 transition-all" />
               </a>
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <FaLinkedin aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <FaLinkedin aria-hidden="true" className="text-3xl text-zinc-500 hover:text-accent-300 transition-all" />
               </a>
               <a href={`https://mail.google.com/mail/?view=cm&to=${profile.email}`} target="_blank" rel="noopener noreferrer" aria-label="Email">
-                <SiGmail aria-hidden="true" className="text-3xl text-gray-500 hover:text-white transition-all" />
+                <SiGmail aria-hidden="true" className="text-3xl text-zinc-500 hover:text-accent-300 transition-all" />
               </a>
             </div>
             <div className="h-px w-12 hidden md:block md:w-px md:h-12 bg-gray-300"></div>
