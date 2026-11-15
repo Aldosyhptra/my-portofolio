@@ -8,7 +8,7 @@ import Navbar from "./components/navbar.jsx";
 
 function App() {
   return (
-    <div className="w-full">
+    <div className="w-full pb-[calc(4rem_+_env(safe-area-inset-bottom))] md:pb-0">
       <Navbar />
       <main>
       <Home />
