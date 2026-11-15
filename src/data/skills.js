@@ -1,8 +1,16 @@
 // Kelompok skills sesuai AGENTS.md bagian 6. Tanpa persentase, tanpa label "expert".
-// Next.js dan TypeScript masuk setelah pemilik mengonfirmasi mengerjakan codelens-web (5 Nov 2026).
+// coreStack = front-end utama, tiap item disertai bukti pemakaian di proyek nyata.
+export const coreStack = [
+  { item: "React (Vite)", evidence: "Portofolio ini" },
+  { item: "Vue.js", evidence: "SearchEngineNutriFood" },
+  { item: "Tailwind CSS", evidence: "Portofolio ini · SearchEngineNutriFood" },
+  { item: "Next.js (App Router)", evidence: "codelens-web" },
+  { item: "TypeScript", evidence: "codelens-web" },
+  { item: "Laravel Blade", evidence: "CSC Group · Neosia TC" },
+];
+
 export const skillGroups = [
-  { label: "Front-End", items: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind CSS", "Laravel Blade", "Jinja", "Responsive Web Design"] },
-  { label: "Front-End (Familiar)", items: ["React (Vite)", "Vue.js", "Next.js", "TypeScript"] },
+  { label: "Front-End", items: ["HTML", "CSS", "JavaScript", "Bootstrap", "Jinja", "Responsive Web Design"] },
   { label: "Back-End", items: ["Laravel (PHP)", "Flask (Python)", "REST API", "Web Scraping"] },
   { label: "Database", items: ["MySQL", "MongoDB"] },
   { label: "AI dan Riset", items: ["OpenAI API Integration", "Prompt Engineering", "Python", "Hugging Face Transformers", "scikit-learn"] },
