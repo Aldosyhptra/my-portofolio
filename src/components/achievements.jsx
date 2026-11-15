@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SectionHeader from "./section-header.jsx";
 import { awards, iprAndCertifications, publications, evidenceFolders } from "../data/achievements.js";
 
 function AchievementCard({ label, title, meta, url, evidence, delay }) {
@@ -51,7 +52,7 @@ export default function Achievements() {
   return (
     <section id="pencapaian" className="py-10">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6 text-center text-white">Pencapaian & Publikasi</h2>
+        <SectionHeader num="03" title="Pencapaian & Publikasi" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-stretch">
           {cards.map((c, i) => (
             <AchievementCard key={c.title} {...c} delay={(i % 3) * 0.1} />

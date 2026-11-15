@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SectionHeader from "./section-header.jsx";
 import { experiences } from "../data/experience.js";
 
 // Baris pengalaman — stagger fade-up saat masuk viewport (framer-motion, sesuai AGENTS §9).
@@ -6,7 +7,7 @@ export default function Experience() {
   return (
     <section id="pengalaman" className="py-10">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6 text-center text-white">Pengalaman Kerja</h2>
+        <SectionHeader num="02" title="Pengalaman Kerja" />
         <div className="space-y-4">
           {experiences.map((exp, i) => (
             <motion.div

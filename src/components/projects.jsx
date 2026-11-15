@@ -1,5 +1,6 @@
 import { projects } from "../data/projects.js";
 
+import SectionHeader from "./section-header.jsx";
 // Kartu proyek unggulan — data statis dari data/projects.js, tanpa GitHub API.
 function ProjectCard({ project }) {
   const { title, role, summary, stack, badges, repo, demo, image, status } = project;
@@ -90,7 +91,7 @@ export default function Projects() {
   return (
     <section id="project" className="py-10">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6 text-center text-white">Proyek Unggulan</h2>
+        <SectionHeader num="04" title="Proyek Unggulan" />
         {featured.length === 0 ? (
           <p className="text-center text-gray-400">Belum ada proyek untuk ditampilkan.</p>
         ) : (

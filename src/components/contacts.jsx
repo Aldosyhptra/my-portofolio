@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { profile } from '../data/profile.js';
 import { FaGithub, FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { SiGmail } from 'react-icons/si';
+import { SiGmail } from "react-icons/si";
+import SectionHeader from "./section-header.jsx";
 
 export default function Contact() {
   const [showModal, setShowModal] = useState(false);
@@ -51,7 +52,7 @@ export default function Contact() {
       className="bg-gradient-to-b to-gray-700 px-10 md:px-0 my-10 md:mb-0 text-start flex flex-col md:flex-row items-center justify-center w-full h-full mx-auto overflow-hidden"
     >
       <div className="p-8 max-w-xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4">Hubungi Saya</h2>
+        <SectionHeader num="05" title="Hubungi Saya" />
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Honeypot Formspree — spam terisi otomatis dibuang; ganti dengan reCAPTCHA bila perlu */}

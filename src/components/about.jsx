@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SectionHeader from './section-header.jsx';
 import { skillGroups } from '../data/skills.js';
 import {
   FaHtml5, FaCss3, FaPython, FaFlask, FaReact, FaVuejs, FaLaravel, FaDatabase,
@@ -53,11 +54,7 @@ export default function About() {
         transition={{ duration: 1, ease: 'easeOut' }}
       >
       <div>
-        <div className="flex items-center mb-5 md:mb-10">
-          <span className="h-px flex-1 bg-gray-300"></span>
-          <h2 className="shrink-0 px-4 text-white text-xl md:text-3xl">Tentang Saya</h2>
-          <span className="h-px flex-1 bg-gray-300"></span>
-        </div>
+        <SectionHeader num="01" title="Tentang Saya" />
         <p className="text-gray-300 max-w-3xl mx-auto mb-4">
           Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web dan ketertarikan pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
         </p>
