@@ -49,7 +49,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-b to-zinc-900 px-10 md:px-0 my-10 md:mb-0 text-start flex flex-col md:flex-row items-center justify-center w-full h-full mx-auto overflow-hidden"
+      className="bg-gradient-to-b to-zinc-900 px-10 md:px-0 mt-10 mb-0 text-start flex flex-col md:flex-row items-center justify-center w-full h-full mx-auto overflow-hidden"
     >
       <div className="p-8 max-w-xl mx-auto">
         <SectionHeader num="05" title="Hubungi Saya" />
