@@ -21,8 +21,9 @@ function ProjectCard({ project }) {
           <img
             src={image}
             alt={`Tampilan ${title}`}
-            className="w-full aspect-[16/10] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className="w-full aspect-[16/10] object-cover transition-transform duration-500 group-hover:scale-[1.03] select-none"
             loading="lazy"
+            draggable="false"
           />
         ) : (
           <div className="w-full aspect-[16/10] bg-zinc-800" aria-hidden="true" />
