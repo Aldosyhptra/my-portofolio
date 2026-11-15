@@ -12,9 +12,9 @@ function ProjectCard({ project }) {
       {/* Gambar: bar chrome + rasio 16/10 supaya semua kartu seragam seperti mockup */}
       <div>
         <div className="flex items-center gap-1.5 px-3 py-2 border-b border-white/10 bg-zinc-900">
-          <span className="w-2 h-2 rounded-full bg-zinc-600" aria-hidden="true" />
-          <span className="w-2 h-2 rounded-full bg-zinc-600" aria-hidden="true" />
-          <span className="w-2 h-2 rounded-full bg-zinc-600" aria-hidden="true" />
+          <span className="w-2 h-2 rounded-full bg-[#ff5f57]" aria-hidden="true" />
+                    <span className="w-2 h-2 rounded-full bg-[#febc2e]" aria-hidden="true" />
+                    <span className="w-2 h-2 rounded-full bg-[#28c840]" aria-hidden="true" />
           {host && <span className="ml-2 truncate text-[10px] font-mono text-zinc-500">{host}</span>}
         </div>
         {image ? (
