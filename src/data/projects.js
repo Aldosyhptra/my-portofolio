@@ -1,7 +1,7 @@
 // Sumber kebenaran daftar Proyek Unggulan (PRD bagian 7). Tidak bergantung pada GitHub API.
-// status: "selesai" | "dikerjakan" | null (null = lencana tidak ditampilkan, jangan ditebak).
+// status: "selesai" | "dikerjakan" | null. Lencana hanya dirender untuk status selain "selesai" (semua kartu sama = informasi nol).
 // badges: string | { text, url } — url = tautan bukti (postingan resmi/dokumen), null sampai tersedia.
-// image: null → kartu menampilkan placeholder netral; TODO(owner): tangkapan layar nyata nutrifood & csc-group.
+// image: null → kartu menampilkan placeholder netral.
 export const projects = [
   {
     id: "tlogo-putri",
@@ -72,8 +72,8 @@ export const projects = [
     stack: ["Vue.js", "Tailwind CSS", "Flask REST API"],
     badges: [],
     repo: "https://github.com/Aldosyhptra/SearchEngineNutriFood",
-    demo: null,
-    image: null,
+        demo: null,
+        image: "img/proyek/nutrifood.webp",
     status: null,
     featured: true,
     order: 5,
@@ -87,8 +87,8 @@ export const projects = [
     stack: ["Laravel Blade"],
     badges: ["Proyek klien"],
     repo: "https://github.com/Aldosyhptra/SCS_Project",
-    demo: null,
-    image: null,
+        demo: null,
+        image: "img/proyek/csc-group.webp",
     status: "selesai",
     featured: true,
     order: 6,

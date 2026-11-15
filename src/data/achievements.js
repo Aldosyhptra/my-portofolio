@@ -2,8 +2,8 @@
 // Data yang belum ada ditandai null + TODO(owner), jangan ditebak.
 
 export const awards = [
-  { title: "Juara 1 Innovatect", project: "MountServ", year: "Juni 2024", team: null, evidence: 'https://drive.google.com/file/d/1Raw7C8Dxy5QAVAwUlaCZORFHY13JERxe/view?usp=sharing' }, // jumlah tim: TODO(owner)
-  { title: "Karya Terinovatif ke-2 Technovation", project: "Tlogo Putri", year: "Juni 2025", team: null, evidence: "https://drive.google.com/file/d/1JMnSf_Sul9xIrKLbi2o3u4kI6veOzVU5/view?usp=drive_link" }, // jumlah tim: TODO(owner)
+  { title: "Juara 1 Innovatect", project: "MountServ", year: "Juni 2024", team: 3, evidence: 'https://drive.google.com/file/d/1Raw7C8Dxy5QAVAwUlaCZORFHY13JERxe/view?usp=sharing' },
+  { title: "Karya Terinovatif ke-2 Technovation", project: "Tlogo Putri", year: "Juni 2025", team: 7, evidence: "https://drive.google.com/file/d/1JMnSf_Sul9xIrKLbi2o3u4kI6veOzVU5/view?usp=drive_link" },
 ];
 
 export const iprAndCertifications = [
@@ -17,14 +17,17 @@ export const iprAndCertifications = [
   {
     title: "Sertifikasi Kompetensi BNSP",
     detail: "Junior Web Developer",
-    issuer: null, // nama LSP: TODO(owner)
+    issuer: "Teknologi Digital",
     date: "Juli 2025 – Juli 2028",
     evidence: "https://drive.google.com/drive/folders/1lRDM5Wf44tsj6zZjmhCbQ_G-GX53DrWw",
   },
 ];
 
-// Folder Google Drive dokumen pendukung (pemilik, 5 Nov 2026).
-export const evidenceFolderUrl = "https://drive.google.com/drive/folders/1X30wlR1GMQJCeBMEQ7LLvzHJ4Yfgu3WE";
+// Folder Google Drive dokumen pendukung (pemilik, 15 Nov 2026).
+export const evidenceFolders = [
+  { label: "Dokumen penghargaan", url: "https://drive.google.com/drive/folders/1X30wlR1GMQJCeBMEQ7LLvzHJ4Yfgu3WE?usp=drive_link" },
+  { label: "Dokumen sertifikasi", url: "https://drive.google.com/drive/folders/1lRDM5Wf44tsj6zZjmhCbQ_G-GX53DrWw?usp=drive_link" },
+];
 
 export const publications = [
   {
@@ -32,6 +35,6 @@ export const publications = [
     journal: "Indonesian Journal of Data and Science",
     year: "2026",
     url: "https://jurnal.yoctobrain.org/index.php/ijodas/article/view/457",
-    accreditation: null, // label SINTA hanya setelah pemilik memverifikasi: TODO(owner)
+    accreditation: "SINTA 2",
   },
 ];

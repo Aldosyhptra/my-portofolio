@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { skillGroups } from '../data/skills.js';
+import SectionHeader from './section-header.jsx';
+import { skillGroups, coreStack } from '../data/skills.js';
 import {
   FaHtml5, FaCss3, FaPython, FaFlask, FaReact, FaVuejs, FaLaravel, FaDatabase,
   FaGit, FaGithub, FaGitlab, FaMobileAlt, FaServer, FaSearch, FaRobot, FaBrain,
@@ -53,11 +54,7 @@ export default function About() {
         transition={{ duration: 1, ease: 'easeOut' }}
       >
       <div>
-        <div className="flex items-center mb-5 md:mb-10">
-          <span className="h-px flex-1 bg-gray-300"></span>
-          <h2 className="shrink-0 px-4 text-white text-xl md:text-3xl">Tentang Saya</h2>
-          <span className="h-px flex-1 bg-gray-300"></span>
-        </div>
+        <SectionHeader num="01" title="Tentang Saya" />
         <p className="text-gray-300 max-w-3xl mx-auto mb-4">
           Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web dan ketertarikan pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
         </p>
@@ -75,22 +72,42 @@ export default function About() {
         transition={{ duration: 1, ease: 'easeOut' }}
       >
 
-                {skillGroups.map((group) => (
-          <div key={group.label} className="w-full max-w-3xl mx-auto mb-8">
-            <h3 className="text-xl font-semibold mb-2 text-center">{group.label}</h3>
-            <div className="flex flex-wrap justify-center gap-2 mt-4">
-              {group.items.map((item) => {
-                const Icon = iconMap[item] || FaCode;
-                return (
-                  <div key={item} className="flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-full px-3 py-1.5 transition-all">
-                    <Icon aria-hidden="true" className="w-4 h-4 text-cyan-400 shrink-0" />
-                    <span className="text-sm text-white">{item}</span>
+                {/* Stack utama dengan bukti pemakaian di proyek nyata */}
+                <div className="w-full max-w-3xl mx-auto mb-8">
+                  <h3 className="font-display text-lg font-semibold text-white mb-3">Stack utama</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                    {coreStack.map(({ item, evidence }) => {
+                      const Icon = iconMap[item] || FaCode;
+                      return (
+                        <div key={item} className="flex items-center gap-3 rounded-xl border border-white/10 bg-zinc-900/60 px-3 py-2.5 hover:border-accent-400/40 transition-colors">
+                          <Icon aria-hidden="true" className="w-6 h-6 text-accent-400 shrink-0" />
+                          <div className="min-w-0">
+                            <p className="text-sm font-semibold text-white truncate">{item}</p>
+                            <p className="text-[11px] leading-snug text-zinc-500">{evidence}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        ))}
+                </div>
+
+                {/* Kelompok pendukung */}
+                {skillGroups.map((group) => (
+                  <div key={group.label} className="w-full max-w-3xl mx-auto mb-8">
+                    <h3 className="font-display text-base font-semibold text-white mb-3">{group.label}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {group.items.map((item) => {
+                        const Icon = iconMap[item] || FaCode;
+                        return (
+                          <div key={item} className="flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-full px-3 py-1.5 transition-all">
+                            <Icon aria-hidden="true" className="w-4 h-4 text-accent-400 shrink-0" />
+                            <span className="text-sm text-white">{item}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
 
       </motion.div>
 
