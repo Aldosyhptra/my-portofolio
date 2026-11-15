@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { awards, iprAndCertifications, publications, evidenceFolderUrl } from "../data/achievements.js";
+import { awards, iprAndCertifications, publications, evidenceFolders } from "../data/achievements.js";
 
 function AchievementCard({ label, title, meta, url, evidence, delay }) {
   return (
@@ -32,16 +32,20 @@ function AchievementCard({ label, title, meta, url, evidence, delay }) {
 }
 
 export default function Achievements() {
-  // TODO(owner): tombol "Lihat dokumen pendukung" (PRD 6.6) — tampilkan setelah URL folder Google Drive tersedia.
   const cards = [
-    ...awards.map((a) => ({ label: "Penghargaan", title: a.title, meta: `${a.project} · ${a.year}`, evidence: a.evidence })),
+    ...awards.map((a) => ({
+      label: "Penghargaan",
+      title: a.title,
+      meta: [a.project, a.year, a.team && `tim ${a.team} orang`].filter(Boolean).join(" · "),
+      evidence: a.evidence,
+    })),
     ...iprAndCertifications.map((c) => ({
       label: "HKI & Sertifikat",
       title: c.title,
       meta: [c.detail, c.issuer, c.date].filter(Boolean).join(" · "),
       evidence: c.evidence,
     })),
-    ...publications.map((p) => ({ label: "Publikasi", title: p.title, meta: `${p.journal} · ${p.year}`, url: p.url })),
+    ...publications.map((p) => ({ label: "Publikasi", title: p.title, meta: [p.journal, p.year, p.accreditation].filter(Boolean).join(" · "), url: p.url })),
   ];
 
   return (
@@ -53,16 +57,19 @@ export default function Achievements() {
             <AchievementCard key={c.title} {...c} delay={(i % 3) * 0.1} />
           ))}
         </div>
-        <div className="text-center mt-6">
-          <a
-            href={evidenceFolderUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 text-sm font-semibold"
-          >
-            Lihat dokumen pendukung
-          </a>
-        </div>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+                  {evidenceFolders.map((f) => (
+                    <a
+                      key={f.url}
+                      href={f.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 text-sm font-semibold"
+                    >
+                      {f.label}
+                    </a>
+                  ))}
+                </div>
       </div>
     </section>
   );
