@@ -73,7 +73,7 @@ export default function Home() {
             alt="Potret Aldo Syahputra"
             className="w-full h-full object-cover object-center"
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
           />
           <div
             className="hidden md:block absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/20 to-transparent"
