@@ -38,7 +38,6 @@ const iconMap = {
   "GitLab": FaGitlab,
   "Postman": FaPaperPlane,
   "Indonesia (native)": FaLanguage,
-  "Inggris (menengah)": FaLanguage,
 };
 
 
@@ -59,7 +58,7 @@ export default function About() {
           Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web dan ketertarikan pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
         </p>
         <p className="text-gray-300 max-w-3xl mx-auto">
-          Pengalaman saya mencakup magang, proyek klien freelance, serta proyek kompetisi dan riset di kampus. Saat ini saya mencari kesempatan magang atau posisi junior untuk memperdalam pengalaman di dunia industri.
+          Pengalaman saya mencakup magang, proyek klien freelance, serta proyek expo kampus dan riset. Saat ini saya mencari kesempatan magang atau posisi junior untuk memperdalam pengalaman di dunia industri.
         </p>
       </div>
       </motion.div>

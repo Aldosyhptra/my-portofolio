@@ -30,7 +30,7 @@ export default function Home() {
               Hi, saya <span className="bg-gradient-to-r from-accent-400 to-accent-600 bg-clip-text text-transparent">{profile.name}</span>
             </h1>
             <p className="text-base md:text-lg text-zinc-300 max-w-2xl">
-              {profile.role} yang senang membangun antarmuka web yang bersih, cepat, dan intuitif.
+              {profile.role} yang fokus membangun antarmuka web yang rapi, fungsional, dan nyaman dipakai.
             </p>
             <p className="text-sm md:text-base text-zinc-400 mt-2 max-w-2xl">
               Fresh graduate Sistem Informasi · tertarik pada integrasi AI.
