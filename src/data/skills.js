@@ -15,5 +15,5 @@ export const skillGroups = [
   { label: "Database", items: ["MySQL", "MongoDB"] },
   { label: "AI dan Riset", items: ["OpenAI API Integration", "Prompt Engineering", "Python", "Hugging Face Transformers", "scikit-learn"] },
   { label: "Tools", items: ["Git", "GitHub", "GitLab", "Postman", "VS Code"] },
-  { label: "Bahasa", items: ["Indonesia (native)", "Inggris (menengah)"] },
+  { label: "Bahasa", items: ["Indonesia (native)"] },
 ];
