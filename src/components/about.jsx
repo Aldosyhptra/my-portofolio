@@ -41,6 +41,16 @@ const iconMap = {
 };
 
 
+// Stagger: kontainer mengatur urutan, tiap item memakai variant yang sama.
+const listStagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.05 } },
+};
+const itemIn = {
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
+};
+
 export default function About() {
 
   return (
@@ -63,52 +73,58 @@ export default function About() {
       </div>
       </motion.div>
 
-      <motion.div
-        className="md:w-[50vw] mt-10 md:mt-0"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-      >
+      <div className="md:w-[50vw] mt-10 md:mt-0">
 
                 {/* Stack utama dengan bukti pemakaian di proyek nyata */}
                 <div className="w-full max-w-3xl mx-auto mb-8">
                   <h3 className="font-display text-lg font-semibold text-white mb-3">Stack utama</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                  <motion.div
+                    variants={listStagger}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"
+                  >
                     {coreStack.map(({ item, evidence }) => {
                       const Icon = iconMap[item] || FaCode;
                       return (
-                        <div key={item} className="flex items-center gap-3 rounded-xl border border-white/10 bg-zinc-900/60 px-3 py-2.5 hover:border-accent-400/40 transition-colors">
+                        <motion.div variants={itemIn} key={item} className="flex items-center gap-3 rounded-xl border border-white/10 bg-zinc-900/60 px-3 py-2.5 hover:border-accent-400/40 transition-colors">
                           <Icon aria-hidden="true" className="w-6 h-6 text-accent-400 shrink-0" />
                           <div className="min-w-0">
                             <p className="text-sm font-semibold text-white truncate">{item}</p>
                             <p className="text-[11px] leading-snug text-zinc-500">{evidence}</p>
                           </div>
-                        </div>
+                        </motion.div>
                       );
                     })}
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Kelompok pendukung */}
                 {skillGroups.map((group) => (
                   <div key={group.label} className="w-full max-w-3xl mx-auto mb-8">
                     <h3 className="font-display text-base font-semibold text-white mb-3">{group.label}</h3>
-                    <div className="flex flex-wrap gap-2">
+                    <motion.div
+                      variants={listStagger}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true, amount: 0.2 }}
+                      className="flex flex-wrap gap-2"
+                    >
                       {group.items.map((item) => {
                         const Icon = iconMap[item] || FaCode;
                         return (
-                          <div key={item} className="flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-full px-3 py-1.5 transition-all">
+                          <motion.div variants={itemIn} key={item} className="flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-full px-3 py-1.5 transition-colors">
                             <Icon aria-hidden="true" className="w-4 h-4 text-accent-400 shrink-0" />
                             <span className="text-sm text-white">{item}</span>
-                          </div>
+                          </motion.div>
                         );
                       })}
-                    </div>
+                    </motion.div>
                   </div>
                 ))}
 
-      </motion.div>
+      </div>
 
     </section>
   );
