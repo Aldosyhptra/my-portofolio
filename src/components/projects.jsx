@@ -14,7 +14,7 @@ function ProjectCard({ project, delay = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delay }}
-      className="flex flex-col h-full overflow-hidden rounded-xl border border-white/10 bg-zinc-900/60 shadow-lg transition-all duration-300 group hover:-translate-y-1 hover:border-accent-400/40 hover:shadow-accent-500/10"
+      className="flex flex-col h-full overflow-hidden rounded-xl border border-white/10 bg-zinc-900/60 shadow-lg transition-[translate,border-color,box-shadow] duration-300 group hover:-translate-y-1 hover:border-accent-400/40 hover:shadow-accent-500/10"
     >
       {/* Gambar: bar chrome + rasio 16/10 supaya semua kartu seragam seperti mockup */}
       <div>
