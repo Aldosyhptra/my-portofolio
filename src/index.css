@@ -60,3 +60,35 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+/* Hero: animasi masuk via CSS (bukan framer) supaya elemen LCP tampil sebelum JS selesai.
+   Framer menulis opacity:0 inline pada HTML prerender, sehingga hero tak pernah terlihat
+   sampai React jalan — itu yang menahan LCP. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-in-left {
+    animation: hero-in-left 1s ease-out both;
+  }
+
+  .hero-in-right {
+    animation: hero-in-right 1s ease-out both;
+  }
+
+  .hero-in-up {
+    animation: hero-in-up 0.8s ease-out 0.5s both;
+  }
+}
+
+@keyframes hero-in-left {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hero-in-right {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hero-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
