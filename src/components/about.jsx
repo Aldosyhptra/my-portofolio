@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import SectionHeader from './section-header.jsx';
+import { listStagger, itemIn } from '../lib/motion.js';
 import { skillGroups, coreStack } from '../data/skills.js';
 import {
   FaHtml5, FaCss3, FaPython, FaFlask, FaReact, FaVuejs, FaLaravel, FaDatabase,
@@ -40,17 +41,6 @@ const iconMap = {
   "Indonesia (native)": FaLanguage,
 };
 
-
-// Stagger: kontainer mengatur urutan, tiap item memakai variant yang sama.
-const listStagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.05 } },
-};
-const itemIn = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
-};
-
 export default function About() {
 
   return (
@@ -65,7 +55,7 @@ export default function About() {
       <div>
         <SectionHeader num="01" title="Tentang Saya" />
         <p className="text-gray-300 max-w-3xl mx-auto mb-4">
-          Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web dan ketertarikan pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
+          Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web, terbiasa mengerjakan alur lengkap sampai back-end, dan tertarik pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
         </p>
         <p className="text-gray-300 max-w-3xl mx-auto">
           Pengalaman saya mencakup magang, proyek klien freelance, serta proyek expo kampus dan riset. Saat ini saya mencari kesempatan magang atau posisi junior untuk memperdalam pengalaman di dunia industri.
