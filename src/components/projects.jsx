@@ -106,6 +106,9 @@ export default function Projects() {
   const featured = projects
     .filter((p) => p.featured)
     .sort((a, b) => a.order - b.order);
+  const others = projects
+    .filter((p) => !p.featured)
+    .sort((a, b) => a.order - b.order);
 
   return (
     <section id="project" className="py-10">
@@ -118,6 +121,38 @@ export default function Projects() {
             {featured.map((project, i) => (
               <ProjectCard key={project.id} project={project} delay={(i % 3) * 0.08} />
             ))}
+          </div>
+        )}
+
+        {/* Proyek pendukung: daftar ringkas tanpa gambar, supaya grid unggulan tetap jadi fokus */}
+        {others.length > 0 && (
+          <div className="mt-10">
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-widest text-zinc-400">Proyek lainnya</h3>
+            <ul className="border-y border-white/10 divide-y divide-white/10">
+              {others.map(({ id, title, role, stack, repo, demo, status }) => (
+                <li key={id} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 py-3">
+                  <a
+                    href={demo || repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-white hover:text-accent-300 hover:underline"
+                  >
+                    {title}
+                  </a>
+                  <span className="text-xs font-semibold text-accent-400">{role}</span>
+                  <span className="text-xs text-zinc-400">{stack.join(" · ")}</span>
+                  {status === "dikerjakan" && <span className="text-xs text-yellow-300">masih dikerjakan</span>}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="https://github.com/Aldosyhptra?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-block text-sm font-medium text-accent-300 hover:underline"
+            >
+              Semua repo di GitHub →
+            </a>
           </div>
         )}
       </div>

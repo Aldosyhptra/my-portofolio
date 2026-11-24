@@ -2,7 +2,7 @@
 // Nomor telepon tidak ditampilkan sebagai teks; hanya dipakai untuk link wa.me.
 export const profile = {
   name: "Aldo Syahputra",
-  role: "Front-End Developer",
+  role: "Junior Full-Stack Developer",
   email: "aldosyahputra80@gmail.com",
   phone: "6281270381987",
   github: "Aldosyhptra",

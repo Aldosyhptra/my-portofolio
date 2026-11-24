@@ -18,13 +18,13 @@ export default function Home() {
                 <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
               </span>
-              Terbuka untuk magang &amp; posisi junior front-end
+              Terbuka untuk magang &amp; posisi junior web developer
             </p>
             <h1 className="text-xl text-center md:text-start md:text-5xl font-display font-bold tracking-tight mb-4 text-white">
               Hi, saya <span className="bg-gradient-to-r from-accent-400 to-accent-600 bg-clip-text text-transparent">{profile.name}</span>
             </h1>
             <p className="text-base md:text-lg text-zinc-300 max-w-2xl">
-              {profile.role} yang fokus membangun antarmuka web yang rapi, fungsional, dan nyaman dipakai.
+              {profile.role} dengan fokus membangun antarmuka web yang rapi dan nyaman dipakai, terbiasa menutup alur sampai back-end Laravel, Flask, dan Next.js.
             </p>
             <p className="text-sm md:text-base text-zinc-400 mt-2 max-w-2xl">
               Fresh graduate Sistem Informasi · tertarik pada integrasi AI.

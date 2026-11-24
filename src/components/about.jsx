@@ -65,7 +65,7 @@ export default function About() {
       <div>
         <SectionHeader num="01" title="Tentang Saya" />
         <p className="text-gray-300 max-w-3xl mx-auto mb-4">
-          Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web dan ketertarikan pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
+          Fresh graduate Sistem Informasi Universitas Jenderal Achmad Yani dengan fokus pada pengembangan front-end web, terbiasa mengerjakan alur lengkap sampai back-end, dan tertarik pada integrasi AI. Saya menikmati menyatukan desain dan fungsi menjadi tampilan yang rapi dan nyaman dipakai.
         </p>
         <p className="text-gray-300 max-w-3xl mx-auto">
           Pengalaman saya mencakup magang, proyek klien freelance, serta proyek expo kampus dan riset. Saat ini saya mencari kesempatan magang atau posisi junior untuk memperdalam pengalaman di dunia industri.
