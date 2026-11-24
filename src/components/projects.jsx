@@ -1,14 +1,21 @@
+import { motion } from "framer-motion";
 import { HiTrophy, HiWrenchScrewdriver } from "react-icons/hi2";
 import SectionHeader from "./section-header.jsx";
 import { projects } from "../data/projects.js";
 
 // Kartu proyek unggulan — data statis dari data/projects.js, tanpa GitHub API.
 // Restyle arah A: surface gelap, chrome browser palsu, rasio gambar terkunci.
-function ProjectCard({ project }) {
+function ProjectCard({ project, delay = 0 }) {
   const { title, role, summary, stack, badges, repo, demo, image, status } = project;
   const host = repo ? new URL(repo).hostname : "";
   return (
-    <div className="flex flex-col h-full overflow-hidden rounded-xl border border-white/10 bg-zinc-900/60 shadow-lg transition-all duration-300 group hover:-translate-y-1 hover:border-accent-400/40 hover:shadow-accent-500/10">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, delay }}
+      className="flex flex-col h-full overflow-hidden rounded-xl border border-white/10 bg-zinc-900/60 shadow-lg transition-[translate,border-color,box-shadow] duration-300 group hover:-translate-y-1 hover:border-accent-400/40 hover:shadow-accent-500/10"
+    >
       {/* Gambar: bar chrome + rasio 16/10 supaya semua kartu seragam seperti mockup */}
       <div>
         <div className="flex items-center gap-1.5 px-3 py-2 border-b border-white/10 bg-zinc-900">
@@ -91,7 +98,7 @@ function ProjectCard({ project }) {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -108,8 +115,8 @@ export default function Projects() {
           <p className="text-center text-gray-400">Belum ada proyek untuk ditampilkan.</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-stretch">
-            {featured.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {featured.map((project, i) => (
+              <ProjectCard key={project.id} project={project} delay={(i % 3) * 0.08} />
             ))}
           </div>
         )}

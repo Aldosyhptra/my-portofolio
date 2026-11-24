@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
 import { profile } from '../data/profile.js';
 
 // Hero split (restyle arah A): badge open-to-work, nama gradasi aksen, foto dengan overlay gelap.
+// Animasi masuk hero memakai CSS (.hero-in-*) — elemen LCP harus tampil sebelum React/framer jalan.
 export default function Home() {
   return (
     <section
@@ -11,13 +11,7 @@ export default function Home() {
       {/* Kontainer Flex utama */}
       <div className="relative flex flex-col md:flex-row items-center justify-center w-full h-full z-10">
         {/* Konten Kiri */}
-        <motion.div
-          className="md:w-[50vw] mt-10 md:mt-0 order-1 md:order-0"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-        >
+        <div className="hero-in-left md:w-[50vw] mt-10 md:mt-0 order-1 md:order-0">
           <div className="mx-auto md:w-[30vw]">
             <p className="inline-flex items-center gap-2 rounded-full border border-accent-400/30 bg-accent-500/10 px-3 py-1 text-xs font-semibold text-accent-300 mb-4">
               <span className="relative flex h-2 w-2" aria-hidden="true">
@@ -36,12 +30,7 @@ export default function Home() {
               Fresh graduate Sistem Informasi · tertarik pada integrasi AI.
             </p>
 
-            <motion.div
-              className="flex flex-row justify-center items-center md:justify-start md:items-start gap-4 mt-6 h-full"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
-            >
+            <div className="hero-in-up flex flex-row justify-center items-center md:justify-start md:items-start gap-4 mt-6 h-full">
               {/* Tombol langsung di <a> — <button> di dalam <a> tidak valid HTML */}
               <a
                 href="/file/CV_Aldo_Syahputra.pdf"
@@ -56,18 +45,12 @@ export default function Home() {
               >
                 Hubungi Saya
               </a>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Gambar Kanan — gradasi kiri menyatu ke panel teks (desktop) */}
-        <motion.div
-          className="relative md:w-[50vw] w-50 h-50 md:h-screen overflow-hidden rounded-2xl md:rounded-none shadow order-0 md:order-1 select-none"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-        >
+        <div className="hero-in-right relative md:w-[50vw] w-50 h-50 md:h-screen overflow-hidden rounded-2xl md:rounded-none shadow order-0 md:order-1 select-none">
           <img
             src="img/gambaraldo.webp"
             alt="Potret Aldo Syahputra"
@@ -79,7 +62,7 @@ export default function Home() {
             className="hidden md:block absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/20 to-transparent"
             aria-hidden="true"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
