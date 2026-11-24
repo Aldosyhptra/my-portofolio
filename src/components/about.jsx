@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import SectionHeader from './section-header.jsx';
+import { listStagger, itemIn } from '../lib/motion.js';
 import { skillGroups, coreStack } from '../data/skills.js';
 import {
   FaHtml5, FaCss3, FaPython, FaFlask, FaReact, FaVuejs, FaLaravel, FaDatabase,
@@ -38,17 +39,6 @@ const iconMap = {
   "GitLab": FaGitlab,
   "Postman": FaPaperPlane,
   "Indonesia (native)": FaLanguage,
-};
-
-
-// Stagger: kontainer mengatur urutan, tiap item memakai variant yang sama.
-const listStagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.05 } },
-};
-const itemIn = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } },
 };
 
 export default function About() {

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { HiTrophy, HiWrenchScrewdriver } from "react-icons/hi2";
 import SectionHeader from "./section-header.jsx";
 import { projects } from "../data/projects.js";
+import { listStagger, itemIn } from "../lib/motion.js";
 
 // Kartu proyek unggulan — data statis dari data/projects.js, tanpa GitHub API.
 // Restyle arah A: surface gelap, chrome browser palsu, rasio gambar terkunci.
@@ -127,10 +128,28 @@ export default function Projects() {
         {/* Proyek pendukung: daftar ringkas tanpa gambar, supaya grid unggulan tetap jadi fokus */}
         {others.length > 0 && (
           <div className="mt-10">
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-widest text-zinc-400">Proyek lainnya</h3>
-            <ul className="border-y border-white/10 divide-y divide-white/10">
+            <motion.h3
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.3 }}
+              className="mb-3 text-sm font-semibold uppercase tracking-widest text-zinc-400"
+            >
+              Proyek lainnya
+            </motion.h3>
+            <motion.ul
+              variants={listStagger}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.15 }}
+              className="border-y border-white/10 divide-y divide-white/10"
+            >
               {others.map(({ id, title, role, stack, repo, demo, status }) => (
-                <li key={id} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 py-3">
+                <motion.li
+                  key={id}
+                  variants={itemIn}
+                  className="flex flex-wrap items-baseline gap-x-3 gap-y-1 py-3"
+                >
                   <a
                     href={demo || repo}
                     target="_blank"
@@ -142,9 +161,9 @@ export default function Projects() {
                   <span className="text-xs font-semibold text-accent-400">{role}</span>
                   <span className="text-xs text-zinc-400">{stack.join(" · ")}</span>
                   {status === "dikerjakan" && <span className="text-xs text-yellow-300">masih dikerjakan</span>}
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
             <a
               href="https://github.com/Aldosyhptra?tab=repositories"
               target="_blank"
