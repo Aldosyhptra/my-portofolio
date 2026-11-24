@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { navScroll } from "../lib/nav-scroll.js";
 import { HiHome, HiUser, HiAcademicCap, HiBriefcase, HiCode, HiMail } from "react-icons/hi";
 
 const LINKS = [
@@ -16,11 +17,25 @@ const Navbar = () => {
 
   useEffect(() => {
     let lastY = window.scrollY;
+    let acc = 0; // akumulasi gerakan vertikal sejak keputusan buka/sembunyi terakhir
     const handleScroll = () => {
       const y = window.scrollY;
-      // Kapsul desktop disembunyikan saat scroll turun (setelah lewat 80px), muncul saat naik
-      setHidden(y > lastY && y > 80);
+      acc += y - lastY;
       lastY = y;
+
+      // Lenis memancarkan gerakan kecil per frame, jadi arah dibaca dari akumulasi,
+      // bukan dari selisih satu event. Ambang 12 px menyerap sisa drift setelah animasi.
+      if (navScroll.active) {
+        // Scroll dari klik navbar: paksa kapsul tampil dan jangan hitung arahnya.
+        acc = 0;
+        setHidden(false);
+      } else if (acc > 12 && y > 80) {
+        setHidden(true);
+        acc = 0;
+      } else if (acc < -12) {
+        setHidden(false);
+        acc = 0;
+      }
 
       // Bagian aktif = yang terakhir melewati area tepat di bawah navbar
       let current = LINKS[0].id;

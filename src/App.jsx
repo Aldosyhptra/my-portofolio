@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLenis } from "lenis/react";
+import { navScroll } from "./lib/nav-scroll.js";
 import Home from "./components/home.jsx";
 import About from "./components/about.jsx";
 import Experience from "./components/experience.jsx";
@@ -22,13 +23,28 @@ function useAnchorScroll() {
       const target = id && id.length > 1 ? document.querySelector(id) : null;
       if (!target) return;
       e.preventDefault();
+      // Selama scroll dari klik nav, navbar tidak boleh menyembunyikan diri.
+      navScroll.active = true;
       lenis.scrollTo(target, {
         offset: window.matchMedia("(min-width: 768px)").matches ? NAV_OFFSET_DESKTOP : 0,
+        onComplete: () => {
+          navScroll.active = false;
+        },
       });
       history.replaceState(null, "", id);
     };
+    // Gulir manual (wheel/sentuh) membatalkan penanda: navbar boleh sembunyi lagi.
+    const release = () => {
+      navScroll.active = false;
+    };
     document.addEventListener("click", onClick);
-    return () => document.removeEventListener("click", onClick);
+    document.addEventListener("wheel", release, { passive: true });
+    document.addEventListener("touchstart", release, { passive: true });
+    return () => {
+      document.removeEventListener("click", onClick);
+      document.removeEventListener("wheel", release);
+      document.removeEventListener("touchstart", release);
+    };
   }, [lenis]);
 }
 
